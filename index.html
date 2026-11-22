@@ -4,42 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence Infographic</title>
+<meta name="description" content="A printable A4 neon infographic about Artificial Intelligence: what it is, how it works, its positive impacts, its history, and how to use it wisely.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Kalam:wght@700&family=Lilita+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#30247f;
-  --ink-soft:#4a3aa8;
-  --accent-blue:#5b72e2;
-  --pink:#e57ad2;
-  --purple:#7b45c9;
-  --shadow:#251a63;
-  --white:#ffffff;
+  --glow-1:#ffd6fb;
+  --glow-2:#ff8ae8;
+  --glow-3:#c94fd8;
+  --box:150,100,225;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#1f1a33}
+html,body{background:#1d0f2b}
 body{
-  font-family:'Baloo 2',system-ui,sans-serif;
+  font-family:'Share Tech',system-ui,sans-serif;color:#fff;
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
-  color:var(--ink);
 }
 
 /* ---------- screen chrome ---------- */
 .toolbar{
   position:sticky;top:0;z-index:100;
-  display:flex;justify-content:center;gap:12px;align-items:center;
-  padding:12px 16px;background:rgba(31,26,51,.92);backdrop-filter:blur(6px);
-  color:#e8e2ff;font-size:14px;font-weight:600;
+  display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap;
+  padding:12px 16px;background:rgba(29,15,43,.9);backdrop-filter:blur(6px);
+  color:#f3dcff;font-size:15px;letter-spacing:.3px;
 }
 .toolbar button{
-  font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:999px;
-  padding:8px 20px;background:linear-gradient(90deg,#e57ad2,#7b45c9);color:#fff;
-  box-shadow:0 3px 0 #251a63;
+  font:inherit;font-family:'Audiowide',sans-serif;font-size:13px;cursor:pointer;border:0;border-radius:999px;
+  padding:9px 20px;color:#fff;background:linear-gradient(90deg,#e05ad8,#7b45e0);
+  box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 0 18px rgba(255,120,230,.55);
 }
-.toolbar button:active{transform:translateY(2px);box-shadow:0 1px 0 #251a63}
-.wrap{padding:24px 16px 48px;display:flex;justify-content:center}
-/* ?bare : page only, no screen chrome (for embedding / snapshots) */
+.toolbar button:hover{box-shadow:0 0 0 1px rgba(255,255,255,.6) inset,0 0 26px rgba(255,140,235,.85)}
+.toolbar button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.wrap{padding:24px 16px 48px;display:flex;justify-content:safe center}
 .bare .toolbar{display:none}
 .bare .wrap{padding:0;display:block}
 .bare .page{box-shadow:none;zoom:1}
@@ -47,115 +44,72 @@ body{
 /* ---------- A4 page ---------- */
 .page{
   position:relative;flex:none;
-  width:210mm;height:297mm;           /* 794 x 1123 px at 96dpi */
-  overflow:hidden;background:#8fa8d8;
-  box-shadow:0 24px 70px rgba(0,0,0,.55);
+  width:210mm;height:297mm;              /* 794 x 1123 px at 96dpi */
+  overflow:hidden;background:#7a3aa8;
+  box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 60px rgba(200,80,220,.25);
   zoom:var(--fit,1);
 }
-.abs{position:absolute}
-#bg{position:absolute;left:0;top:0;width:100%;height:100%;z-index:0}
-#fg{position:absolute;left:0;top:0;width:100%;height:100%;z-index:19;pointer-events:none}
+#art{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 
-/* ---------- bubbles ---------- */
-.bubble{position:absolute;z-index:30;pointer-events:none}
-
-/* ---------- title ---------- */
-#title{position:absolute;left:0;top:40px;width:620px;height:270px;z-index:5;overflow:visible}
-
-/* ---------- panels ---------- */
-.panel{
-  position:absolute;border-radius:22px;border:3px solid #fff;
-  box-shadow:0 0 0 2px rgba(37,26,99,.55), 6px 7px 0 2px var(--shadow);
+/* ---------- neon type ---------- */
+.neon{
+  position:absolute;z-index:10;font-family:'Audiowide',sans-serif;font-weight:400;color:#fff;text-transform:uppercase;letter-spacing:.4px;
+  text-shadow:0 0 2px #fff,0 0 6px var(--glow-1),0 0 12px var(--glow-2),0 0 24px var(--glow-3);
+  -webkit-text-stroke:.45px #fff;
 }
-.pill{
-  position:absolute;z-index:20;display:flex;align-items:center;justify-content:center;
-  background:#fff;border-radius:999px;white-space:nowrap;
-  border:3px solid #3b2c94;
-  box-shadow:0 0 0 3px #fff, 5px 6px 0 3px var(--shadow);
-  font-weight:800;line-height:1;color:var(--ink);
-  padding-top:4px;
+.para{
+  position:absolute;z-index:10;font-family:'Share Tech',sans-serif;color:#fff;
+  font-size:16.4px;line-height:18.6px;letter-spacing:.15px;
+  text-shadow:0 0 6px rgba(40,5,70,.95),0 0 2px rgba(40,5,70,.9),0 1px 1px rgba(40,5,70,.8);
+}
+.para b{font-weight:400;color:#ffe6fb;text-shadow:0 0 6px rgba(255,140,235,.9),0 0 2px #fff}
+.rule{
+  position:absolute;z-index:10;height:2px;
+  background:repeating-linear-gradient(90deg,#fff 0 9px,transparent 9px 14px);
+  filter:drop-shadow(0 0 3px #ff9cf0);
+}
+.rule::before{content:"";position:absolute;left:0;top:-6px;width:2.5px;height:14px;background:#fff;border-radius:2px}
+.rule.end::before{left:auto;right:0}
+
+/* left column */
+.h-what{left:56px;top:297px;font-size:20px;line-height:25px}
+.r-what{left:49px;top:370px;width:222px}
+.p-what{left:56px;top:381px;width:212px}
+.h-how{left:56px;top:482px;font-size:11.5px;letter-spacing:1.2px}
+.steps{position:absolute;z-index:10;left:52px;top:502px;width:220px;display:grid;grid-template-columns:1fr 1fr;gap:7px 8px}
+.chip{
+  display:flex;align-items:center;gap:6px;height:25px;padding:0 8px 0 4px;border-radius:7px;
+  font-family:'Audiowide',sans-serif;font-size:10.5px;letter-spacing:.4px;color:#fff;
+  background:linear-gradient(90deg,rgba(var(--box),.85),rgba(var(--box),.45));
+  border:1px solid rgba(255,200,250,.55);
+  box-shadow:0 0 10px rgba(255,120,230,.35),inset 0 0 8px rgba(255,255,255,.12);
+}
+.chip i{
+  flex:none;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:10px;
+  background:#fff;color:#7b3fc4;box-shadow:0 0 8px #ff9cf0;
 }
 
-/* Apa itu AI */
-.p-apa{left:367px;top:324px;width:402px;height:211px;z-index:10;
-  background:
-    radial-gradient(120% 70% at 30% 0%, rgba(255,210,245,.55), rgba(255,210,245,0) 60%),
-    linear-gradient(180deg,#d993dc 0%,#c27ad6 32%,#9a5cc9 66%,#6e3cae 100%);}
-.pill-apa{left:452px;top:302px;width:226px;height:44px;font-size:25px}
-.txt-apa{position:absolute;left:388px;top:361px;width:368px;z-index:12;
-  color:#fff;font-weight:800;font-size:14.6px;line-height:19.6px;letter-spacing:.05px;
-  text-shadow:0 1px 1px rgba(60,20,110,.35);text-align:justify;hyphens:none}
-.step{position:absolute;top:464px;width:80px;height:54px;z-index:12;background:#fff;border-radius:11px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  box-shadow:0 3px 0 rgba(70,30,130,.45), inset 0 -3px 0 rgba(190,150,230,.35)}
-.step svg{width:27px;height:27px;margin-bottom:1px}
-.step span{font-weight:800;font-size:15px;line-height:1;letter-spacing:.4px;color:#7d3dbd}
+.h-wise{left:59px;top:737px;font-size:15px;line-height:18px}
+.r-wise{left:49px;top:784px;width:160px}
+.p-wise{left:59px;top:796px;width:206px}
 
-/* AI di sekitar kita */
-.p-sekitar{left:24px;top:592px;width:313px;height:277px;z-index:10;
-  background:
-    radial-gradient(90% 60% at 50% 45%, rgba(120,110,240,.55), rgba(120,110,240,0) 70%),
-    linear-gradient(180deg,#5146c6 0%,#3b37ab 45%,#4639b3 100%);}
-.pill-sekitar{left:60px;top:582px;width:240px;height:46px;font-size:25px}
-.item{position:absolute;left:41px;width:283px;height:46px;z-index:12;background:#fff;border-radius:12px;
-  display:flex;align-items:center;overflow:visible;
-  box-shadow:0 2px 0 rgba(30,20,90,.35)}
-.item .ico{position:relative;flex:none;width:68px;height:100%;border-radius:12px 0 0 12px;
-  background:linear-gradient(90deg,#c590e6 0%,#dcb8f1 45%,rgba(255,255,255,0) 100%);
-  display:grid;place-items:center}
-.item .ico svg{width:44px;height:40px;overflow:visible}
-.item p{font-weight:700;color:var(--ink);font-size:14.2px;line-height:18px;padding:3px 6px 0 2px}
+/* right column */
+.h-impact{right:46px;top:312px;font-size:19px;line-height:25px;text-align:right}
+.r-impact{left:556px;top:399px;width:199px}
+.box{
+  position:absolute;z-index:9;left:497px;width:260px;height:55px;
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  padding:0 12px 0 44px;text-align:right;
+  font-family:'Share Tech',sans-serif;font-size:15.6px;line-height:17.6px;color:#fff;
+  text-shadow:0 0 4px rgba(60,10,100,.7);
+  background:linear-gradient(90deg,rgba(var(--box),0) 0%,rgba(var(--box),.72) 24%,rgba(var(--box),.86) 100%);
+}
+.box::after{content:"";position:absolute;right:0;top:0;bottom:0;width:3px;background:#fff;opacity:.55;box-shadow:0 0 8px #ff9cf0}
+.box svg{flex:none;width:22px;height:22px;filter:drop-shadow(0 0 4px #ff9cf0)}
 
-/* did you know */
-.p-dyk{left:367px;top:562px;width:402px;height:310px;z-index:10;
-  background:
-    radial-gradient(70% 55% at 62% 38%, rgba(125,130,250,.75), rgba(125,130,250,0) 70%),
-    linear-gradient(170deg,#3f3ab5 0%,#4d4bc6 45%,#4a42bf 75%,#3a31a6 100%);}
-.pill-dyk{left:458px;top:553px;width:228px;height:46px;font-size:26px}
-.txt-dyk{position:absolute;left:485px;top:607px;width:271px;z-index:12;
-  color:#fff;font-weight:800;font-size:14.6px;line-height:19.6px;text-shadow:0 1px 1px rgba(20,10,80,.35);text-align:justify}
-#kawan{position:absolute;left:470px;top:697px;width:210px;height:36px;z-index:12;overflow:visible}
-.card{position:absolute;top:734px;width:120px;height:128px;z-index:12;border-radius:14px;
-  background:linear-gradient(180deg,rgba(150,145,250,.55),rgba(120,110,235,.45));
-  border:1px solid rgba(255,255,255,.18);overflow:hidden}
-.card p{position:absolute;left:0;right:0;top:9px;text-align:center;color:#fff;font-weight:700;
-  font-size:11px;line-height:14px;padding:0 5px}
-.card svg{position:absolute;left:0;bottom:0;width:120px;height:92px}
-#turing{position:absolute;left:372px;top:584px;width:110px;height:112px;z-index:13;overflow:visible}
-
-/* gunakan AI dengan bijak */
-.p-bijak{left:24px;top:905px;width:745px;height:175px;z-index:8;
-  background:
-    radial-gradient(60% 90% at 10% 0%, rgba(255,200,240,.55), rgba(255,200,240,0) 70%),
-    linear-gradient(98deg,#e28bdc 0%,#c978d9 28%,#9d5ad0 55%,#7c43bf 80%,#6b39b0 100%);}
-.pill-bijak{left:53px;top:894px;width:309px;height:46px;font-size:25px}
-.etik-card{position:absolute;left:151px;top:952px;width:192px;height:117px;z-index:11;
-  background:#fff;border-radius:16px;box-shadow:0 3px 0 rgba(60,25,120,.35)}
-#etik{position:absolute;left:196px;top:968px;width:140px;height:96px;z-index:12;overflow:visible}
-#wheel{position:absolute;left:44px;top:927px;width:154px;height:154px;z-index:13;overflow:visible}
-#robot-b{position:absolute;left:316px;top:868px;width:196px;height:255px;z-index:16;overflow:visible}
-#arrow{position:absolute;left:466px;top:938px;width:72px;height:50px;z-index:17;overflow:visible}
-
-/* tantangan clipboard */
-.board{position:absolute;left:530px;top:906px;width:266px;height:250px;z-index:14;
-  transform:rotate(8.5deg);transform-origin:0 0;
-  background:linear-gradient(160deg,#f6b1a6,#ee9a90);border-radius:14px;
-  box-shadow:0 0 0 2px #fff, 4px 6px 0 2px rgba(60,25,90,.45)}
-.paper{position:absolute;left:12px;top:22px;right:10px;bottom:-10px;background:#fff;border-radius:6px;
-  box-shadow:inset 0 0 0 1px rgba(200,170,200,.5)}
-.clip{position:absolute;left:106px;top:-14px;width:118px;height:46px;z-index:2}
-.tantangan{position:absolute;left:58px;top:34px;font-family:'Luckiest Guy','Lilita One',sans-serif;
-  font-size:29px;color:#e3343c;letter-spacing:1px;line-height:1;transform:rotate(2deg);
-  text-shadow:1px 1px 0 #b81f2c}
-.tlist{position:absolute;left:26px;top:72px;list-style:none;font-family:'Kalam',cursive;font-weight:700;
-  font-size:15.2px;line-height:24.5px;color:#5c2a82;transform:rotate(3deg);transform-origin:0 0}
-.tlist li{position:relative;padding-left:22px;white-space:nowrap}
-.tlist li svg{position:absolute;left:0;top:4px;width:14px;height:14px}
-
-/* robots, decor */
-#robot-tr{position:absolute;left:496px;top:36px;width:296px;height:322px;z-index:15;overflow:visible}
-#robot-l{position:absolute;left:-8px;top:312px;width:384px;height:286px;z-index:9;overflow:visible}
-#siren{position:absolute;left:497px;top:858px;width:102px;height:102px;z-index:31;overflow:visible}
+.h-dyk{right:46px;top:808px;font-size:15px;line-height:18px;text-align:right}
+.r-dyk{left:578px;top:832px;width:177px}
+.p-dyk{right:46px;top:844px;width:196px;text-align:right}
 
 /* ---------- print ---------- */
 @page{size:A4;margin:0}
@@ -174,629 +128,346 @@ body{
   <button type="button" onclick="window.print()">Print / Save as PDF</button>
 </div>
 
-<!-- shared SVG defs -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <radialGradient id="gBubble" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset=".62" stop-color="#e9f0ff" stop-opacity=".05"/>
-      <stop offset=".86" stop-color="#f3e8ff" stop-opacity=".28"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity=".75"/>
-    </radialGradient>
-    <symbol id="bubble" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="48.5" fill="url(#gBubble)" stroke="#ffffff" stroke-opacity=".8" stroke-width="1.6"/>
-      <path d="M66 12 A40 40 0 0 1 84 26" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-      <path d="M88 33 A40 40 0 0 1 90 40" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-      <path d="M14 66 A40 40 0 0 0 30 86" stroke="#fff" stroke-opacity=".55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <circle cx="50" cy="50" r="44" fill="none" stroke="#b9c8ff" stroke-opacity=".35" stroke-width="2"/>
-    </symbol>
-    <symbol id="star4" viewBox="-10 -10 20 20">
-      <path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/>
-    </symbol>
-    <!-- white "sticker" outline -->
-    <filter id="sticker" x="-10%" y="-10%" width="120%" height="120%">
-      <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="d"/>
-      <feFlood flood-color="#ffffff"/>
-      <feComposite in2="d" operator="in" result="o"/>
-      <feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
-  </defs>
-</svg>
-
 <div class="wrap">
 <main class="page" id="page" aria-label="Artificial Intelligence infographic">
 
-  <!-- ===== background city (generated) ===== -->
-  <svg id="bg" viewBox="0 0 794 1123" preserveAspectRatio="none" aria-hidden="true">
+  <!-- ===== illustration (drawn in reference units: 736 x 1041) ===== -->
+  <svg id="art" viewBox="0 0 736 1041" preserveAspectRatio="none" aria-hidden="true">
     <defs>
-      <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#c8d4f6"/><stop offset=".35" stop-color="#a9bde9"/><stop offset="1" stop-color="#6c86c4"/>
+      <linearGradient id="gBase" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#a2419c"/><stop offset=".17" stop-color="#94409f"/>
+        <stop offset=".36" stop-color="#7c3ba8"/><stop offset=".55" stop-color="#5e2b8e"/>
+        <stop offset=".72" stop-color="#7e2f8e"/><stop offset="1" stop-color="#9d3a93"/>
       </linearGradient>
-      <linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#0e2a3c" stop-opacity="0"/>
-        <stop offset=".17" stop-color="#0e2a3c" stop-opacity="0"/>
-        <stop offset=".3" stop-color="#0f2f3e" stop-opacity=".55"/>
-        <stop offset=".5" stop-color="#112c44" stop-opacity=".72"/>
-        <stop offset=".78" stop-color="#1a2856" stop-opacity=".68"/>
-        <stop offset="1" stop-color="#241f5c" stop-opacity=".5"/>
-      </linearGradient>
-      <pattern id="wLight" width="9" height="11" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="5" height="7" fill="#ffffff" fill-opacity=".26"/></pattern>
-      <pattern id="wDark" width="9" height="11" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="5" height="7" fill="#1f3a5a" fill-opacity=".22"/></pattern>
-      <pattern id="wGold" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="5" height="7" fill="#ffe6a0" fill-opacity=".85"/></pattern>
-      <pattern id="wTeal" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="5" height="7" fill="#8fe0d8" fill-opacity=".45"/></pattern>
-    </defs>
-    <rect width="794" height="1123" fill="url(#gSky)"/>
-    <g id="bgCity"></g>
-  </svg>
-
-  <!-- ===== title ===== -->
-  <svg id="title" viewBox="0 0 620 270" aria-label="Artificial Intelligence">
-    <defs>
-      <linearGradient id="gArt" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#8b93f2"/><stop offset=".45" stop-color="#5a5ad6"/><stop offset="1" stop-color="#3a2fae"/>
-      </linearGradient>
-      <linearGradient id="gInt" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#ffc4ef"/><stop offset=".45" stop-color="#e48ddd"/><stop offset="1" stop-color="#8a48c6"/>
-      </linearGradient>
-      <clipPath id="clipHiA"><rect x="0" y="40" width="620" height="44"/></clipPath>
-      <clipPath id="clipHiI"><rect x="0" y="168" width="620" height="30"/></clipPath>
-    </defs>
-    <g font-family="'Lilita One','Baloo 2',sans-serif" text-anchor="start">
-      <!-- ARTIFICIAL -->
-      <text x="38" y="140" font-size="122" textLength="548" lengthAdjust="spacingAndGlyphs"
-            fill="#2a1d72" stroke="#2a1d72" stroke-width="18" stroke-linejoin="round" transform="translate(5 8)">ARTIFICIAL</text>
-      <text x="38" y="140" font-size="122" textLength="548" lengthAdjust="spacingAndGlyphs"
-            fill="#fff" stroke="#fff" stroke-width="15" stroke-linejoin="round">ARTIFICIAL</text>
-      <text x="38" y="140" font-size="122" textLength="548" lengthAdjust="spacingAndGlyphs"
-            fill="url(#gArt)" stroke="#3b2fa6" stroke-width="1.5">ARTIFICIAL</text>
-      <text x="38" y="140" font-size="122" textLength="548" lengthAdjust="spacingAndGlyphs" clip-path="url(#clipHiA)"
-            fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="7 48" stroke-dashoffset="3" stroke-linecap="round" transform="translate(2.5 3)">ARTIFICIAL</text>
-      <!-- INTELLIGENCE -->
-      <text x="44" y="226" font-size="82" textLength="420" lengthAdjust="spacingAndGlyphs"
-            fill="#4a2490" stroke="#4a2490" stroke-width="15" stroke-linejoin="round" transform="translate(4 6)">INTELLIGENCE</text>
-      <text x="44" y="226" font-size="82" textLength="420" lengthAdjust="spacingAndGlyphs"
-            fill="#fff" stroke="#fff" stroke-width="12" stroke-linejoin="round">INTELLIGENCE</text>
-      <text x="44" y="226" font-size="82" textLength="420" lengthAdjust="spacingAndGlyphs"
-            fill="url(#gInt)" stroke="#8a48c6" stroke-width="1.2">INTELLIGENCE</text>
-      <text x="44" y="226" font-size="82" textLength="420" lengthAdjust="spacingAndGlyphs" clip-path="url(#clipHiI)"
-            fill="none" stroke="#fff" stroke-width="2.4" stroke-dasharray="5 40" stroke-linecap="round" transform="translate(2 2.5)">INTELLIGENCE</text>
-    </g>
-  </svg>
-
-  <!-- ===== top-right robot reading a book ===== -->
-  <svg id="robot-tr" viewBox="0 0 296 322" aria-hidden="true">
-    <defs>
-      <radialGradient id="gHeadTR" cx="38%" cy="28%" r="80%">
-        <stop offset="0" stop-color="#c99af7"/><stop offset=".45" stop-color="#8d4be0"/><stop offset="1" stop-color="#5420ad"/>
+      <radialGradient id="gHalo" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#fff6ff" stop-opacity=".95"/>
+        <stop offset=".32" stop-color="#efd2ff" stop-opacity=".5"/>
+        <stop offset=".7" stop-color="#c27ee6" stop-opacity=".18"/>
+        <stop offset="1" stop-color="#b070e0" stop-opacity="0"/>
       </radialGradient>
-      <linearGradient id="gBodyTR" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#fbd6ef"/><stop offset="1" stop-color="#d996df"/>
+      <linearGradient id="gFloor" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#cf6ac4"/><stop offset=".3" stop-color="#ad48a6"/><stop offset="1" stop-color="#8e3189"/>
       </linearGradient>
-      <linearGradient id="gArmTR" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a964ec"/><stop offset="1" stop-color="#6a2fc4"/>
+      <linearGradient id="gRay" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
       </linearGradient>
-    </defs>
-    <!-- dark green aura -->
-    <path d="M70 70 C80 10 250 0 268 80 C290 150 300 250 280 300 C220 330 60 320 10 270 C-10 240 20 190 70 170 Z" fill="#163d2e" opacity=".55" filter="url(#soft)"/>
-    <g filter="url(#sticker)">
-      <!-- upper arm (behind) -->
-      <path d="M232 178 C262 186 268 230 262 268" stroke="url(#gArmTR)" stroke-width="30" fill="none" stroke-linecap="round"/>
-      <!-- body -->
-      <path d="M122 150 L224 150 Q236 150 238 162 L244 236 Q244 250 230 252 L122 254 Q108 254 108 240 L110 162 Q110 150 122 150 Z" fill="url(#gBodyTR)"/>
-      <path d="M128 176 L224 176 M128 206 L226 206" stroke="#c07ad6" stroke-width="2.5"/>
-      <rect x="150" y="184" width="44" height="14" rx="7" fill="#9a56dd"/>
-      <!-- neck -->
-      <rect x="148" y="138" width="54" height="20" rx="6" fill="#7b3dd0"/>
-      <!-- head -->
-      <circle cx="170" cy="80" r="74" fill="url(#gHeadTR)"/>
-      <path d="M98 96 A74 74 0 0 0 196 150 A82 82 0 0 1 110 84 Z" fill="#f59ad8" opacity=".9"/>
-      <ellipse cx="135" cy="35" rx="30" ry="12" transform="rotate(-28 135 35)" fill="#fff" opacity=".28"/>
-      <!-- visor band -->
-      <path d="M100 98 Q160 128 236 96" stroke="#8ff0f8" stroke-width="10" fill="none" stroke-linecap="round"/>
-      <path d="M104 98 Q160 124 232 97" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
-      <!-- ear disc -->
-      <circle cx="226" cy="98" r="22" fill="#7a3ad3" stroke="#c9a0f5" stroke-width="5"/>
-      <circle cx="226" cy="98" r="8" fill="#5a22b0"/>
-      <!-- book -->
-      <path d="M2 216 L118 184 L150 258 L28 282 Z" fill="#6f44c9"/>
-      <path d="M118 184 L222 196 L240 262 L150 258 Z" fill="#6f44c9"/>
-      <path d="M6 210 Q60 186 116 178 Q130 210 144 250 Q86 254 32 272 Q20 240 6 210 Z" fill="#ebe3fb"/>
-      <path d="M116 178 Q170 176 218 190 Q228 222 236 254 Q190 246 144 250 Q130 210 116 178 Z" fill="#f8f4ff"/>
-      <path d="M116 178 Q130 210 144 250" stroke="#b8a2e6" stroke-width="2" fill="none"/>
-      <g stroke="#bcaee6" stroke-width="1.6" stroke-linecap="round" fill="none">
-        <path d="M22 214 Q62 198 104 192"/><path d="M27 226 Q66 210 108 204"/><path d="M32 238 Q70 222 112 216"/><path d="M37 250 Q74 236 116 228"/>
-        <path d="M128 190 Q168 188 208 198"/><path d="M132 202 Q170 200 212 210"/><path d="M136 214 Q174 212 216 222"/><path d="M140 226 Q178 224 220 234"/>
-      </g>
-      <!-- forearm + hand (front) -->
-      <path d="M262 268 C258 292 232 300 206 296" stroke="url(#gArmTR)" stroke-width="28" fill="none" stroke-linecap="round"/>
-      <circle cx="262" cy="270" r="17" fill="#c189f5"/>
-      <circle cx="262" cy="270" r="8" fill="#7b3dd0"/>
-      <ellipse cx="198" cy="290" rx="20" ry="15" fill="#b072ee"/>
-      <!-- shoulder -->
-      <circle cx="232" cy="178" r="22" fill="#9b55e6"/>
-      <circle cx="232" cy="178" r="11" fill="#c597f5"/>
-    </g>
-    <!-- sparkle -->
-    <use href="#star4" x="174" y="60" width="30" height="30" fill="#fff"/>
-    <circle cx="189" cy="75" r="4" fill="#fff" filter="url(#glow)"/>
-  </svg>
-
-  <!-- ===== left robot with phone ===== -->
-  <svg id="robot-l" viewBox="0 0 384 286" aria-hidden="true">
-    <defs>
-      <linearGradient id="gShell" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1d4ef"/>
+      <linearGradient id="gShadow" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3a0f3e" stop-opacity=".45"/><stop offset=".35" stop-color="#2c0b33" stop-opacity=".9"/><stop offset="1" stop-color="#22082a" stop-opacity=".95"/>
       </linearGradient>
-      <radialGradient id="gFace" cx="45%" cy="35%" r="75%">
-        <stop offset="0" stop-color="#7d44e3"/><stop offset=".6" stop-color="#4d1fb2"/><stop offset="1" stop-color="#2f1080"/>
+      <linearGradient id="gBldA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d45ae"/><stop offset="1" stop-color="#55298a"/></linearGradient>
+      <linearGradient id="gBldB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d44b0"/><stop offset="1" stop-color="#cf96e8"/></linearGradient>
+      <linearGradient id="gBldC" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6f379f"/><stop offset="1" stop-color="#b274da"/></linearGradient>
+      <linearGradient id="gBldE" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9bdf5"/><stop offset="1" stop-color="#9558c8"/></linearGradient>
+      <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7edff"/><stop offset="1" stop-color="#e8cdfb"/></linearGradient>
+      <radialGradient id="gScreen" cx="50%" cy="46%" r="62%">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#f8f0ff"/><stop offset=".8" stop-color="#e4d0fa"/><stop offset="1" stop-color="#d0b6f2"/>
       </radialGradient>
-      <linearGradient id="gPhone" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#9a6ff0"/><stop offset="1" stop-color="#5a2fc0"/>
+      <linearGradient id="gHood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#43319f"/><stop offset="1" stop-color="#271c78"/></linearGradient>
+      <linearGradient id="gPants" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6de8"/><stop offset="1" stop-color="#6a3fc0"/></linearGradient>
+      <linearGradient id="gShin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e37ad8"/><stop offset="1" stop-color="#ad4cb0"/></linearGradient>
+      <linearGradient id="gShoe" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2d8fc"/><stop offset="1" stop-color="#a796ec"/></linearGradient>
+      <filter id="blurS" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.4"/></filter>
+      <filter id="blurM" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
+      <filter id="blurL" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"/></filter>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="neon" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1.8" result="b1"/>
+        <feFlood flood-color="#ffffff"/><feComposite in2="b1" operator="in" result="g1"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b2"/>
+        <feFlood flood-color="#ff8ae8" flood-opacity=".95"/><feComposite in2="b2" operator="in" result="g2"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b3"/>
+        <feFlood flood-color="#c94fd8" flood-opacity=".8"/><feComposite in2="b3" operator="in" result="g3"/>
+        <feMerge><feMergeNode in="g3"/><feMergeNode in="g2"/><feMergeNode in="g1"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <path id="arc1" d="M 70 128 Q 368 66 666 128"/>
+      <path id="arc2" d="M 60 184 Q 368 124 676 184"/>
+      <!-- ===== ambience: lighting on the people, fog, grain ===== -->
+      <filter id="fxRunner" x="-12%" y="-8%" width="124%" height="116%" color-interpolation-filters="sRGB">
+        <feColorMatrix in="SourceGraphic" type="matrix" result="grade"
+          values="0.80 0.10 0.10 0 0.02  0.05 0.72 0.13 0 0  0.08 0.06 0.90 0 0.04  0 0 0 1 0"/>
+        <feFlood flood-color="#1a0a44" flood-opacity=".32"/>
+        <feComposite in2="SourceAlpha" operator="in" result="shade"/>
+        <feBlend in="shade" in2="grade" mode="multiply" result="shaded"/>
+        <feMorphology in="SourceAlpha" operator="erode" radius="5" result="er"/>
+        <feComposite in="SourceAlpha" in2="er" operator="out" result="edge"/>
+        <feGaussianBlur in="edge" stdDeviation="3.5" result="edgeB"/>
+        <feFlood flood-color="#ffe4fd"/>
+        <feComposite in2="edgeB" operator="in"/>
+        <feComposite in2="SourceAlpha" operator="in" result="rim"/>
+        <feBlend in="rim" in2="shaded" mode="screen" result="lit"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="bl"/>
+        <feFlood flood-color="#ffc2f5" flood-opacity=".4"/>
+        <feComposite in2="bl" operator="in" result="bloom"/>
+        <feMerge><feMergeNode in="bloom"/><feMergeNode in="lit"/></feMerge>
+      </filter>
+      <filter id="fxSmall" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+        <feColorMatrix in="SourceGraphic" type="matrix" result="grade"
+          values="0.82 0.10 0.10 0 0.03  0.06 0.76 0.12 0 0.01  0.08 0.08 0.88 0 0.05  0 0 0 1 0"/>
+        <feFlood flood-color="#cfa6f2" flood-opacity=".2"/>
+        <feComposite in2="SourceAlpha" operator="in" result="haze"/>
+        <feMerge result="hazed"><feMergeNode in="grade"/><feMergeNode in="haze"/></feMerge>
+        <feMorphology in="SourceAlpha" operator="erode" radius="2" result="er"/>
+        <feComposite in="SourceAlpha" in2="er" operator="out" result="edge"/>
+        <feGaussianBlur in="edge" stdDeviation="1.6" result="edgeB"/>
+        <feFlood flood-color="#fff0ff"/>
+        <feComposite in2="edgeB" operator="in"/>
+        <feComposite in2="SourceAlpha" operator="in" result="rim"/>
+        <feBlend in="rim" in2="hazed" mode="screen" result="lit"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="bl"/>
+        <feFlood flood-color="#ffd0f8" flood-opacity=".45"/>
+        <feComposite in2="bl" operator="in" result="bloom"/>
+        <feMerge><feMergeNode in="bloom"/><feMergeNode in="lit"/></feMerge>
+      </filter>
+      <!-- cel-shaded corner smoke: clean outline + soft glow, like the figures -->
+      <filter id="fogCel" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="1.3" result="d"/>
+        <feFlood flood-color="#5f55c4"/>
+        <feComposite in2="d" operator="in" result="line"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="bl"/>
+        <feFlood flood-color="#ffd6fb" flood-opacity=".45"/>
+        <feComposite in2="bl" operator="in" result="glow"/>
+        <feMerge><feMergeNode in="glow"/><feMergeNode in="line"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <linearGradient id="gSmokeL" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#d6d1fd" stop-opacity=".2"/><stop offset=".32" stop-color="#c9c3fb" stop-opacity=".92"/><stop offset="1" stop-color="#9b93ec"/>
       </linearGradient>
-      <linearGradient id="gScreen" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#d7c8ff"/><stop offset=".5" stop-color="#b19af2"/><stop offset="1" stop-color="#8e6ee6"/>
+      <linearGradient id="gSmokeR" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#d6d1fd" stop-opacity=".35"/><stop offset=".35" stop-color="#c9c3fb" stop-opacity=".92"/><stop offset="1" stop-color="#9b93ec"/>
       </linearGradient>
+      <linearGradient id="gSmokeLight" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f4f3ff" stop-opacity=".9"/><stop offset="1" stop-color="#dcd8fe" stop-opacity=".55"/>
+      </linearGradient>
+      <pattern id="pGrain" width="80" height="80" patternUnits="userSpaceOnUse"><image href="assets/grain.png" width="80" height="80"/></pattern>
+      <radialGradient id="gVignette" cx="50%" cy="48%" r="72%">
+        <stop offset=".55" stop-color="#1b0733" stop-opacity="0"/><stop offset="1" stop-color="#1b0733" stop-opacity=".55"/>
+      </radialGradient>
+      <radialGradient id="gBokeh"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".6" stop-color="#ffd6fb" stop-opacity=".25"/><stop offset="1" stop-color="#ffd6fb" stop-opacity="0"/></radialGradient>
     </defs>
-    <!-- phone -->
-    <g transform="rotate(12 280 132)" filter="url(#sticker)">
-      <rect x="210" y="14" width="140" height="240" rx="26" fill="url(#gPhone)"/>
-      <rect x="219" y="23" width="122" height="222" rx="19" fill="url(#gScreen)"/>
-      <rect x="258" y="31" width="44" height="11" rx="5.5" fill="#3a1890"/>
-      <g stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9">
-        <path d="M240 72 L262 64"/><path d="M276 60 L318 54"/><path d="M246 80 L300 70"/>
-        <path d="M250 196 L292 190"/><path d="M262 206 L320 198"/>
+
+    <!-- sky -->
+    <rect width="736" height="1041" fill="url(#gBase)"/>
+
+    <!-- floating dots -->
+    <g id="dots" fill="#fff"></g>
+
+    <!-- light halo behind the phone -->
+    <ellipse id="halo" cx="384" cy="555" rx="340" ry="410" fill="url(#gHalo)"/>
+
+    <!-- floor with perspective + light rays -->
+    <rect x="0" y="736" width="736" height="305" fill="url(#gFloor)"/>
+    <g stroke="#fff" stroke-opacity=".16" stroke-width="1.4">
+      <path d="M380 742 L-520 1041 M380 742 L-260 1041 M380 742 L-60 1041 M380 742 L120 1041 M380 742 L250 1041 M380 742 L540 1041 M380 742 L680 1041 M380 742 L860 1041 M380 742 L1060 1041 M380 742 L1320 1041"/>
+    </g>
+    <g id="rays" fill="url(#gRay)">
+      <path d="M364 752 L372 752 L170 1041 L140 1041 Z"/>
+      <path d="M370 752 L376 752 L262 1041 L248 1041 Z"/>
+      <path d="M376 752 L382 752 L330 1041 L302 1041 Z"/>
+      <path d="M384 752 L390 752 L500 1041 L470 1041 Z"/>
+      <path d="M388 752 L394 752 L560 1041 L545 1041 Z"/>
+      <path d="M392 752 L400 752 L672 1041 L640 1041 Z"/>
+      <path d="M360 754 L368 754 L40 960 L20 952 Z" opacity=".7"/>
+      <path d="M396 754 L404 754 L736 930 L736 948 Z" opacity=".7"/>
+    </g>
+
+    <!-- ===== left buildings ===== -->
+    <path d="M-5 430 H257 V805 L-5 925 Z" fill="#62318f"/>
+    <path d="M-5 438 H115 V870 L-5 925 Z" fill="url(#gBldA)"/>
+    <rect x="-5" y="438" width="120" height="4" fill="#e0b0f6"/>
+    <g fill="#9e66d0" opacity=".55"><rect x="0" y="468" width="110" height="5"/><rect x="0" y="500" width="110" height="5"/><rect x="0" y="660" width="110" height="5"/><rect x="0" y="692" width="110" height="5"/></g>
+    <path d="M110 456 L252 484 L252 690 L110 708 Z" fill="url(#gBldB)"/>
+    <path d="M110 456 L252 484" stroke="#f8d8fb" stroke-width="3"/>
+    <g transform="translate(110 456) skewY(11.15)" fill="#f7d6fb" opacity=".38" id="winL"></g>
+    <path d="M178 470 V600 Q178 620 198 620 H252" stroke="#c48ae6" stroke-width="11" fill="none"/>
+    <path d="M175 470 V600 Q175 616 192 617" stroke="#f6d4fa" stroke-width="3" fill="none"/>
+    <path d="M0 640 L242 676 L242 792 L0 842 Z" fill="url(#gBldC)"/>
+    <g stroke="#d49cf0" stroke-opacity=".55" stroke-width="2.2" fill="none">
+      <path d="M0 662 L242 694"/><path d="M0 704 L242 726"/><path d="M0 746 L242 758"/>
+      <path d="M40 646 V834 M90 653 V824 M140 661 V814 M190 668 V803"/>
+    </g>
+    <path d="M0 722 L122 737 L122 867 L0 923 Z" fill="#5c2c8e"/>
+    <path d="M0 722 L122 737" stroke="#e7b6f5" stroke-width="2.5"/>
+    <!-- neon frame -->
+    <g filter="url(#glow)">
+      <rect x="6" y="532" width="46" height="108" rx="9" fill="#ffc6f4" fill-opacity=".12" stroke="#ffd1f7" stroke-width="3"/>
+      <rect x="13" y="540" width="32" height="92" rx="5" fill="none" stroke="#ffd1f7" stroke-width="1.6" stroke-dasharray="1.2 3" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===== right buildings ===== -->
+    <path d="M580 468 H740 V897 L580 825 Z" fill="#62318f"/>
+    <path d="M588 520 L692 506 L692 800 L588 782 Z" fill="url(#gBldE)"/>
+    <path d="M588 520 L692 506" stroke="#fbe0fc" stroke-width="3"/>
+    <g fill="#fbe7ff" opacity=".45">
+      <path d="M600 540 L622 537 L622 640 L600 641 Z"/><path d="M630 536 L652 533 L652 639 L630 640 Z"/><path d="M660 532 L682 529 L682 638 L660 639 Z"/>
+    </g>
+    <path d="M692 470 H740 V897 L692 876 Z" fill="#55298a"/>
+    <g fill="#8c56c4" opacity=".7"><rect x="692" y="500" width="48" height="5"/><rect x="692" y="660" width="48" height="5"/><rect x="692" y="700" width="48" height="5"/></g>
+    <g filter="url(#glow)">
+      <rect x="712" y="545" width="42" height="98" rx="9" fill="#ffc6f4" fill-opacity=".12" stroke="#ffd1f7" stroke-width="3"/>
+      <rect x="719" y="553" width="30" height="82" rx="5" fill="none" stroke="#ffd1f7" stroke-width="1.6" stroke-dasharray="1.2 3" stroke-linecap="round"/>
+    </g>
+    <path d="M584 690 L736 700 L736 884 L584 800 Z" fill="#b377dc"/>
+    <path d="M584 690 L736 700" stroke="#f3cdf8" stroke-width="2.5"/>
+    <g stroke="#9b5cc8" stroke-width="2.2" fill="none"><path d="M584 724 L736 740"/><path d="M584 758 L736 786"/></g>
+    <g filter="url(#glow)" fill="none" stroke="#ffb8f2" stroke-width="2" stroke-dasharray="3 3">
+      <path d="M598 770 L632 776 L632 832 L598 818 Z"/><path d="M642 778 L668 783 L668 828 L642 818 Z"/>
+    </g>
+
+    <!-- runner's shadow -->
+    <path d="M393 924 L288 1041 L490 1041 Z" fill="url(#gShadow)"/>
+
+    <!-- ===== giant glowing phone ===== -->
+    <rect x="236" y="320" width="284" height="474" rx="64" fill="#fff" opacity=".5" filter="url(#blurL)"/>
+    <rect x="255" y="358" width="246" height="410" rx="40" fill="#e08fe2"/>
+    <rect x="258" y="346" width="240" height="406" rx="38" fill="url(#gBody)" stroke="#fff" stroke-width="2"/>
+    <rect x="268" y="356" width="220" height="384" rx="29" fill="url(#gScreen)"/>
+    <rect x="268" y="356" width="220" height="384" rx="29" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.5"/>
+    <!-- neural-network motif on the screen -->
+    <g stroke="#c9a6f2" stroke-width="1.4" opacity=".55" fill="none">
+      <path d="M290 402 L330 386 L372 404 M330 386 L340 428 L290 402 M340 428 L372 404"/>
+      <path d="M464 410 L424 392 L386 412 M424 392 L416 432 L464 410 M416 432 L386 412"/>
+      <path d="M292 690 L330 668 L366 690 M330 668 L326 714"/>
+      <path d="M464 688 L428 666 L392 690 M428 666 L432 712"/>
+    </g>
+    <g fill="#c9a6f2" opacity=".75">
+      <circle cx="290" cy="402" r="3.5"/><circle cx="330" cy="386" r="4"/><circle cx="372" cy="404" r="3.5"/><circle cx="340" cy="428" r="3.5"/>
+      <circle cx="464" cy="410" r="3.5"/><circle cx="424" cy="392" r="4"/><circle cx="386" cy="412" r="3.5"/><circle cx="416" cy="432" r="3.5"/>
+      <circle cx="292" cy="690" r="3.5"/><circle cx="330" cy="668" r="4"/><circle cx="366" cy="690" r="3.5"/><circle cx="326" cy="714" r="3.5"/>
+      <circle cx="464" cy="688" r="3.5"/><circle cx="428" cy="666" r="4"/><circle cx="392" cy="690" r="3.5"/><circle cx="432" cy="712" r="3.5"/>
+    </g>
+    <ellipse id="bloom" cx="378" cy="545" rx="92" ry="175" fill="#fff" opacity=".85" filter="url(#blurM)"/>
+    <rect x="353" y="362" width="50" height="6" rx="3" fill="#cf9fe8"/>
+    <circle cx="414" cy="365" r="3.2" fill="#cf9fe8"/>
+    <path d="M282 600 L312 372 L332 372 L300 640 Z" fill="#fff" opacity=".22"/>
+
+    <!-- light pool where the phone meets the floor -->
+    <ellipse cx="378" cy="762" rx="200" ry="24" fill="#fff" opacity=".5" filter="url(#blurM)"/>
+
+    <!-- ===== figures (lit by the phone: colour grade, backlight shade, rim light, glow) ===== -->
+    <g id="man" filter="url(#fxSmall)"><image href="assets/Neon%20Vector%20Sprinter%20in%20Motion.png" x="227.1" y="198.7" width="156.4" height="211.6"/></g>
+    <g id="woman" filter="url(#fxSmall)"><image href="assets/Purple-haired%20runner%20with%20blue%20shoes.png" x="389.9" y="238.3" width="104.7" height="157"/></g>
+    <g id="runner" filter="url(#fxRunner)"><image href="assets/Rear-view%20runner%20in%20purple%20jacket.png" x="159.6" y="387.2" width="399.6" height="599.4"/></g>
+
+    <!-- faint light shafts from the screen, drifting dust -->
+    <g fill="#fff" opacity=".07" filter="url(#blurS)">
+      <path d="M372 520 L384 520 L150 160 L110 175 Z"/><path d="M372 520 L384 520 L640 150 L680 170 Z"/>
+      <path d="M372 540 L384 540 L40 420 L30 452 Z"/><path d="M372 540 L384 540 L720 430 L730 462 Z"/>
+    </g>
+    <g fill="#fff" filter="url(#blurS)">
+      <circle cx="300" cy="470" r="1.6" opacity=".8"/><circle cx="512" cy="430" r="1.3" opacity=".7"/><circle cx="262" cy="560" r="2" opacity=".6"/>
+      <circle cx="530" cy="600" r="1.5" opacity=".7"/><circle cx="455" cy="512" r="1.2" opacity=".8"/><circle cx="318" cy="690" r="1.8" opacity=".6"/>
+      <circle cx="476" cy="740" r="1.6" opacity=".7"/><circle cx="244" cy="420" r="1.3" opacity=".6"/><circle cx="560" cy="520" r="2.2" opacity=".5"/>
+      <circle cx="408" cy="372" r="1.4" opacity=".8"/><circle cx="350" cy="790" r="1.5" opacity=".6"/><circle cx="520" cy="820" r="2" opacity=".5"/>
+      <circle cx="280" cy="830" r="1.7" opacity=".55"/><circle cx="430" cy="455" r="1.1" opacity=".7"/><circle cx="600" cy="700" r="1.6" opacity=".5"/>
+    </g>
+    <g fill="url(#gBokeh)">
+      <circle cx="120" cy="980" r="16" opacity=".55"/><circle cx="626" cy="996" r="12" opacity=".5"/><circle cx="560" cy="902" r="9" opacity=".45"/>
+      <circle cx="210" cy="870" r="7" opacity=".5"/><circle cx="690" cy="860" r="10" opacity=".4"/>
+    </g>
+
+    <!-- ===== a little smoke in the bottom corners (cel style, deliberately not mirrored) ===== -->
+    <g id="fogL" opacity=".92">
+      <path filter="url(#fogCel)" fill="url(#gSmokeL)" d="M-30 1060 L-30 985 C-5 970 25 975 45 985 C60 955 95 945 120 955 C135 928 160 915 178 912 C186 900 192 890 198 884 C200 905 196 930 200 960 C205 1000 218 1035 240 1060 Z"/>
+      <path fill="url(#gSmokeLight)" d="M-30 1060 L-30 1002 C-6 990 22 994 42 1002 C58 976 92 968 116 976 C136 954 160 944 178 934 C182 960 184 995 192 1030 C196 1045 202 1055 210 1060 Z"/>
+      <g stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="3" opacity=".85">
+        <path d="M-10 980 C10 974 30 978 42 984"/><path d="M64 959 C82 950 101 948 116 953"/><path d="M140 928 C154 919 166 914 176 912" opacity=".6"/>
       </g>
-      <g font-family="'Lilita One',sans-serif" font-size="92" text-anchor="middle">
-        <text x="282" y="178" fill="#3a1e95" stroke="#3a1e95" stroke-width="10" stroke-linejoin="round" transform="translate(4 5)">AI</text>
-        <text x="282" y="178" fill="#fff" stroke="#fff" stroke-width="7" stroke-linejoin="round">AI</text>
-        <text x="282" y="178" fill="#4a35b8">AI</text>
+    </g>
+    <g id="fogR" opacity=".9">
+      <path filter="url(#fogCel)" fill="url(#gSmokeR)" d="M776 1060 L776 1000 C752 990 728 996 712 1006 C698 984 668 978 646 990 C628 984 604 990 598 1006 C592 1024 600 1046 614 1060 Z"/>
+      <path fill="url(#gSmokeLight)" d="M776 1060 L776 1016 C754 1008 732 1012 716 1020 C702 1000 674 996 652 1006 C636 1002 616 1008 612 1022 C610 1038 614 1050 622 1060 Z"/>
+      <g stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="3" opacity=".85">
+        <path d="M756 994 C740 992 726 996 714 1004"/><path d="M676 983 C664 981 652 985 646 991" opacity=".7"/><path d="M630 991 C620 991 611 996 605 1004" opacity=".6"/>
       </g>
     </g>
-    <g filter="url(#sticker)">
-      <!-- body (sitting, curled) -->
-      <path d="M18 194 Q96 160 186 192 Q214 236 190 282 L26 284 Q-2 240 18 194 Z" fill="url(#gShell)"/>
-      <path d="M30 214 Q86 192 150 204" stroke="#efc6ea" stroke-width="7" fill="none" stroke-linecap="round"/>
-      <path d="M40 246 Q96 226 170 240" stroke="#efc6ea" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <!-- back leg -->
-      <path d="M150 268 Q196 262 214 238" stroke="#fbe6f6" stroke-width="30" fill="none" stroke-linecap="round"/>
-      <path d="M188 262 Q204 254 212 240" stroke="#7a3fd6" stroke-width="10" fill="none" stroke-linecap="round"/>
-      <!-- arm reaching the phone -->
-      <path d="M150 214 Q196 196 238 210" stroke="#fbe6f6" stroke-width="30" fill="none" stroke-linecap="round"/>
-      <rect x="176" y="190" width="16" height="36" rx="7" transform="rotate(-10 184 208)" fill="#7a3fd6"/>
-      <circle cx="244" cy="210" r="19" fill="#fdeefa"/>
-      <path d="M232 226 Q250 234 262 220" stroke="#7a3fd6" stroke-width="7" fill="none" stroke-linecap="round"/>
-      <!-- front leg -->
-      <path d="M22 238 Q20 274 66 276" stroke="#fbe6f6" stroke-width="34" fill="none" stroke-linecap="round"/>
-      <path d="M16 252 Q30 274 60 276" stroke="#7a3fd6" stroke-width="11" fill="none" stroke-linecap="round"/>
-      <circle cx="118" cy="226" r="12" fill="#7a3fd6"/>
-      <circle cx="118" cy="226" r="5" fill="#e3c6f7"/>
-      <!-- neck ring -->
-      <ellipse cx="92" cy="176" rx="42" ry="12" fill="#7a3fd6"/>
-      <!-- head (tilted) -->
-      <g transform="rotate(-8 92 96)">
-        <path d="M10 42 Q92 -4 172 36 Q198 96 170 156 Q92 190 14 152 Q-14 96 10 42 Z" fill="url(#gShell)"/>
-        <path d="M172 40 Q196 96 170 152 Q160 158 150 160 Q174 100 158 36 Z" fill="#e5c2ee"/>
-        <path d="M22 54 Q84 24 148 50 Q168 98 146 144 Q84 168 22 144 Q2 98 22 54 Z" fill="url(#gFace)"/>
-        <path d="M34 62 Q66 44 104 46" stroke="#9f82f2" stroke-width="5" fill="none" stroke-linecap="round" opacity=".75"/>
-        <!-- top cap -->
-        <circle cx="92" cy="16" r="16" fill="#efd7f3"/>
-        <circle cx="92" cy="16" r="10" fill="#7a3fd6"/>
-        <!-- eyes + smile -->
-        <ellipse cx="60" cy="100" rx="19" ry="30" fill="#fff"/>
-        <ellipse cx="126" cy="104" rx="13" ry="25" fill="#fff"/>
-        <path d="M90 140 Q100 148 110 140" stroke="#e7d6ff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      </g>
+
+    <!-- ===== finishing: vignette + film grain ===== -->
+    <rect width="736" height="1041" fill="url(#gVignette)" style="mix-blend-mode:multiply"/>
+    <rect width="736" height="1041" fill="url(#pGrain)" opacity=".09" style="mix-blend-mode:overlay"/>
+
+    <!-- ===== neon title ===== -->
+    <g id="title" filter="url(#neon)" font-family="'Audiowide',sans-serif" fill="#fff8ff" stroke="#fff8ff" stroke-width="1.6" stroke-linejoin="round" text-anchor="middle">
+      <text font-size="62" letter-spacing="1"><textPath href="#arc1" startOffset="50%">ARTIFICIAL</textPath></text>
+      <text font-size="54" letter-spacing="1"><textPath href="#arc2" startOffset="50%">INTELLIGENCE</textPath></text>
     </g>
   </svg>
 
-  <!-- ===== Apa itu AI ===== -->
-  <div class="panel p-apa"></div>
-  <div class="pill pill-apa"><span>What&nbsp;<span style="color:#d769cf">Is&nbsp;AI</span>&nbsp;??</span></div>
-  <p class="txt-apa">
-    Artificial Intelligence (AI) is the ability of a machine or computer to imitate human intelligence. AI enables machines to learn, think, analyze, and make decisions just like humans do. Here is how it works step by step :
-  </p>
-  <div class="step" style="left:389px">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="#8a45cc"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 7.2v3.6c0 1.7 3.6 3 8 3s8-1.3 8-3V7.2c-1 1.4-4.3 2.4-8 2.4S5 8.6 4 7.2z"/><path d="M4 13.2v3.6c0 1.7 3.6 3 8 3s8-1.3 8-3v-3.6c-1 1.4-4.3 2.4-8 2.4s-7-1-8-2.4z"/></g></svg>
-    <span>DATA</span>
-  </div>
-  <div class="step" style="left:480px">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#8a45cc" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.2 13.2A8.3 8.3 0 0 1 6 18.6" stroke-width="1.9"/><path d="M3.8 10.8A8.3 8.3 0 0 1 18 5.4" stroke-width="1.9"/>
-      <path d="M18.4 2.6v3.2h-3.2" stroke-width="1.9"/><path d="M5.6 21.4v-3.2h3.2" stroke-width="1.9"/>
-      <circle cx="12" cy="12" r="4.3" stroke-width="2.6" stroke-dasharray="1.7 1.4"/><circle cx="12" cy="12" r="3" fill="#8a45cc" stroke="none"/><circle cx="12" cy="12" r="1.2" fill="#fff" stroke="none"/>
-    </svg>
-    <span>PROCESS</span>
-  </div>
-  <div class="step" style="left:570px">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#a04fd6" d="M11.4 3.6c-.8-.5-1.8-.7-2.7-.5-1.4.3-2.4 1.4-2.7 2.7-1.5.3-2.7 1.6-2.7 3.2 0 .6.2 1.2.5 1.7-.7.6-1.2 1.5-1.2 2.5 0 1.5 1 2.8 2.4 3.2.2 1.7 1.7 3 3.4 3 .6 0 1.2-.2 1.7-.5.4.4.9.6 1.4.7z"/>
-      <path fill="#7a3bc4" d="M12.6 3.6c.8-.5 1.8-.7 2.7-.5 1.4.3 2.4 1.4 2.7 2.7 1.5.3 2.7 1.6 2.7 3.2 0 .6-.2 1.2-.5 1.7.7.6 1.2 1.5 1.2 2.5 0 1.5-1 2.8-2.4 3.2-.2 1.7-1.7 3-3.4 3-.6 0-1.2-.2-1.7-.5-.4.4-.9.6-1.4.7z"/>
-      <g fill="none" stroke="#f3e6ff" stroke-width="1" stroke-linecap="round"><path d="M6 8.5c1 0 1.8.6 2 1.5M4.5 13c1.2-.6 2.6-.2 3.2.8M8 16.5c.2-1 1-1.8 2-1.9M9.5 5.5c.3.9 0 1.8-.7 2.4"/><path d="M18 8.5c-1 0-1.8.6-2 1.5M19.5 13c-1.2-.6-2.6-.2-3.2.8M16 16.5c-.2-1-1-1.8-2-1.9M14.5 5.5c-.3.9 0 1.8.7 2.4"/></g>
-    </svg>
-    <span>LEARN</span>
-  </div>
-  <div class="step" style="left:661px">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="12" r="9.2" fill="none" stroke="#8a45cc" stroke-width="3" stroke-dasharray="2.6 1.5"/>
-      <circle cx="12" cy="12" r="7.6" fill="#8a45cc"/>
-      <circle cx="12" cy="12" r="5.6" fill="none" stroke="#fff" stroke-width="1.3"/>
-      <path d="M9.4 12.2l1.8 1.8 3.6-3.8" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <span>RESULT</span>
+  <!-- ===== left column ===== -->
+  <h2 class="neon h-what">What exactly<br>is AI ?</h2>
+  <div class="rule r-what"></div>
+  <p class="para p-what">AI is technology that lets machines <b>imitate human intelligence</b>: they learn from data, spot patterns, and make decisions.</p>
+  <div class="neon h-how">How it works</div>
+  <div class="steps" aria-label="How AI works">
+    <div class="chip"><i>1</i>DATA</div>
+    <div class="chip"><i>2</i>PROCESS</div>
+    <div class="chip"><i>3</i>LEARN</div>
+    <div class="chip"><i>4</i>RESULT</div>
   </div>
 
-  <!-- ===== AI di sekitar kita ===== -->
-  <div class="panel p-sekitar"></div>
-  <div class="pill pill-sekitar"><span>AI&nbsp;<span style="color:var(--accent-blue)">Around</span>&nbsp;Us</span></div>
+  <h2 class="neon h-wise">How can we<br>use AI wisely?</h2>
+  <div class="rule r-wise"></div>
+  <p class="para p-wise">Be creative and stay aware. Use AI in positive ways, <b>protect your data and privacy</b>, and keep learning. Watch out for misuse, deepfakes, and cyberbullying. Remember: AI is a <b>friend, not a foe!</b></p>
 
-  <div class="item" style="top:645px">
-    <div class="ico">
-      <svg viewBox="0 0 44 40" aria-hidden="true">
-        <rect x="9" y="4" width="26" height="34" rx="5" fill="#efe6ff" stroke="#b79ae8" stroke-width="1.5"/>
-        <rect x="13" y="10" width="18" height="22" rx="2" fill="#fff"/>
-        <rect x="15" y="22" width="3" height="8" fill="#6f8ee8"/><rect x="19.5" y="18" width="3" height="12" fill="#f39b4a"/><rect x="24" y="14" width="3" height="16" fill="#8a5ae0"/>
-        <circle cx="22" cy="-4" r="6.5" fill="#c3a3f2" stroke="#fff" stroke-width="1.5"/>
-        <circle cx="22" cy="-6" r="2" fill="#fff"/><path d="M18.6 -1.2 Q22 -4.4 25.4 -1.2" stroke="#fff" stroke-width="1.6" fill="none"/>
-      </svg>
-    </div>
-    <p>Virtual assistants: Siri, Google Assistant</p>
+  <!-- ===== right column ===== -->
+  <h2 class="neon h-impact">Positive impacts<br>of AI in<br>daily life</h2>
+  <div class="rule r-impact end"></div>
+
+  <div class="box" style="top:421px">
+    <span>Virtual assistants answer our questions in seconds</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="8.5" y="2.5" width="7" height="12" rx="3.5"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg>
   </div>
-  <div class="item" style="top:697px">
-    <div class="ico">
-      <svg viewBox="0 0 44 40" aria-hidden="true">
-        <path d="M2 8 L8 8 L12 28 L36 28" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9 12 L40 12 L36 25 L11.5 25 Z" fill="#fff" fill-opacity=".85" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M14 17 H34 M15 21 H32" stroke="#b58ae6" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="15" cy="34" r="3.2" fill="#fff"/><circle cx="32" cy="34" r="3.2" fill="#fff"/>
-      </svg>
-    </div>
-    <p>Online shopping (e-commerce product recommendations)</p>
+  <div class="box" style="top:498px">
+    <span>Smart product suggestions when we shop online</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5h3l2.2 11h10.6l2.2-7.5H6.6"/><circle cx="9.5" cy="19" r="1.5" fill="#fff"/><circle cx="17" cy="19" r="1.5" fill="#fff"/></svg>
   </div>
-  <div class="item" style="top:748px">
-    <div class="ico">
-      <svg viewBox="0 0 44 40" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <g stroke="#4f7fe0" stroke-width="3"><path d="M6 12V6h6"/><path d="M32 6h6v6"/><path d="M38 28v6h-6"/><path d="M12 34H6v-6"/></g>
-        <path d="M14 14c2-6 14-6 16 0 1.5 5 0 12-8 14-8-2-9.5-9-8-14z" stroke="#5a6fe0" stroke-width="2.2" fill="#eef1ff"/>
-        <circle cx="18.5" cy="17" r="1.4" fill="#5a6fe0" stroke="none"/><circle cx="25.5" cy="17" r="1.4" fill="#5a6fe0" stroke="none"/>
-        <path d="M22 18v4h-1.6" stroke="#5a6fe0" stroke-width="1.6"/><path d="M19 24.5c1.8 1.3 4.2 1.3 6 0" stroke="#5a6fe0" stroke-width="1.6"/>
-      </g>
-      </svg>
-    </div>
-    <p>Camera filters &amp; face recognition for phone security</p>
+  <div class="box" style="top:576px">
+    <span>Face recognition keeps our phones secure</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8V4.5A1.5 1.5 0 0 1 4.5 3H8M16 3h3.5A1.5 1.5 0 0 1 21 4.5V8M21 16v3.5a1.5 1.5 0 0 1-1.5 1.5H16M8 21H4.5A1.5 1.5 0 0 1 3 19.5V16"/><path d="M9 10h.01M15 10h.01M9.2 15.4c1.6 1.2 4 1.2 5.6 0"/></svg>
   </div>
-  <div class="item" style="top:800px">
-    <div class="ico">
-      <svg viewBox="0 0 44 40" aria-hidden="true">
-        <defs><linearGradient id="gChat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb3ff"/><stop offset="1" stop-color="#4f6ee6"/></linearGradient></defs>
-        <path d="M5 7h34a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H16l-7 6v-6H5a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3z" fill="url(#gChat)"/>
-        <path d="M9 14h24M9 19h26M9 24h16" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <p>Chatbots (ChatGPT, Gemini) &amp; automated customer service</p>
+  <div class="box" style="top:652px">
+    <span>Chatbots give fast, 24/7 customer service</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" stroke-linecap="round" stroke-width="2.6"/></svg>
+  </div>
+  <div class="box" style="top:729px">
+    <span>Handles repetitive tasks so we can focus on creativity</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5L12 14.4 7.5 16.8l.9-5L4.8 8.3l5-.7z"/></svg>
   </div>
 
-  <!-- ===== Did you know ===== -->
-  <div class="panel p-dyk"></div>
-  <div class="pill pill-dyk"><span>Did&nbsp;<span style="color:var(--accent-blue)">You</span>&nbsp;Know?</span></div>
-
-  <svg id="turing" viewBox="0 0 110 112" aria-label="Turing 1950">
-    <defs>
-      <linearGradient id="gTurHead" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9c8ff"/><stop offset="1" stop-color="#4c78e6"/></linearGradient>
-    </defs>
-    <g filter="url(#sticker)">
-      <line x1="62" y1="6" x2="62" y2="18" stroke="#7a9be8" stroke-width="3"/>
-      <circle cx="62" cy="6" r="5" fill="#f2a64a"/>
-      <ellipse cx="62" cy="54" rx="22" ry="12" fill="#6f95ee"/>
-      <ellipse cx="62" cy="36" rx="28" ry="21" fill="url(#gTurHead)"/>
-      <rect x="42" y="25" width="40" height="24" rx="11" fill="#17235e"/>
-      <ellipse cx="54" cy="35" rx="3.6" ry="4.6" fill="#7ff2ff"/><ellipse cx="70" cy="35" rx="3.6" ry="4.6" fill="#7ff2ff"/>
-      <path d="M57 42 Q62 46 67 42" stroke="#7ff2ff" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <circle cx="33" cy="37" r="6" fill="#4c78e6"/><circle cx="91" cy="37" r="6" fill="#4c78e6"/>
-      <circle cx="90" cy="62" r="7" fill="#a9c8ff"/>
-    </g>
-    <g font-family="'Lilita One',sans-serif" text-anchor="middle">
-      <text x="44" y="66" font-size="22" letter-spacing="1" fill="#f489d8" stroke="#fff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">TURING</text>
-      <text x="56" y="106" font-size="50" textLength="104" lengthAdjust="spacingAndGlyphs" fill="#fff" stroke="#fff" stroke-width="13" stroke-linejoin="round" transform="translate(2 3)">1950</text>
-      <text x="56" y="106" font-size="50" textLength="104" lengthAdjust="spacingAndGlyphs" fill="#fff" stroke="#30247f" stroke-width="7" stroke-linejoin="round" paint-order="stroke">1950</text>
-    </g>
-  </svg>
-
-  <p class="txt-dyk">
-    The first AI was a program called “Logic Theorist” (1950s), which was able to imitate the way humans think when solving problems.
-  </p>
-
-  <svg id="kawan" viewBox="0 0 210 36" aria-label="Friend, Not Foe">
-    <text x="105" y="27" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="24" letter-spacing="-.2"
-          fill="#2c2280" stroke="#fff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">Friend, Not Foe</text>
-  </svg>
-
-  <div class="card" style="left:380px">
-    <p>Handles data &amp;<br>repetitive tasks</p>
-    <svg viewBox="0 0 120 92" aria-hidden="true">
-      <g filter="url(#sticker)">
-        <!-- robot at laptop -->
-        <rect x="40" y="70" width="34" height="30" rx="10" fill="#f2eaff"/>
-        <circle cx="38" cy="78" r="9" fill="#8a52e0"/>
-        <path d="M36 62 Q20 72 26 92" stroke="#efe6ff" stroke-width="12" fill="none" stroke-linecap="round"/>
-        <ellipse cx="54" cy="44" rx="22" ry="20" fill="#f5efff"/>
-        <rect x="38" y="34" width="32" height="20" rx="9" fill="#2b1f6b"/>
-        <ellipse cx="48" cy="44" rx="3" ry="4" fill="#c49cff"/><ellipse cx="60" cy="44" rx="3" ry="4" fill="#c49cff"/>
-        <circle cx="33" cy="44" r="6" fill="#8a52e0"/>
-        <path d="M54 22 V16" stroke="#8a52e0" stroke-width="3"/><circle cx="54" cy="14" r="3.5" fill="#8a52e0"/>
-        <!-- laptop -->
-        <path d="M58 66 L98 60 L104 86 L64 92 Z" fill="#b7b2cc"/>
-        <path d="M62 68 L95 63 L99 83 L66 88 Z" fill="#d9d6e6"/>
-        <path d="M52 92 L110 84 L114 90 L54 98 Z" fill="#9590ad"/>
-      </g>
-    </svg>
-  </div>
-  <div class="card" style="left:505px">
-    <p>Humans focus on<br>creativity &amp; empathy</p>
-    <svg viewBox="0 0 120 92" aria-hidden="true">
-      <g filter="url(#sticker)">
-        <!-- hair back -->
-        <path d="M36 48 Q34 20 58 18 Q82 18 82 46 Q84 70 74 76 L42 76 Q34 66 36 48 Z" fill="#4a2a2a"/>
-        <!-- body -->
-        <path d="M30 100 Q30 74 58 72 Q86 74 86 100 Z" fill="#7a4fd6"/>
-        <path d="M50 72 Q58 82 66 72" fill="#f2c2a4"/>
-        <!-- neck + face -->
-        <rect x="53" y="58" width="10" height="16" rx="4" fill="#ebb394"/>
-        <ellipse cx="58" cy="46" rx="14" ry="17" fill="#f6caae"/>
-        <path d="M44 42 Q48 26 62 28 Q74 30 73 46 Q66 36 56 36 Q48 36 44 42 Z" fill="#4a2a2a"/>
-        <circle cx="53" cy="48" r="1.6" fill="#3a2020"/><circle cx="63" cy="48" r="1.6" fill="#3a2020"/>
-        <path d="M54 55 Q58 58 62 55" stroke="#c0605a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-        <!-- waving hand -->
-        <path d="M84 84 Q92 70 92 54" stroke="#7a4fd6" stroke-width="10" fill="none" stroke-linecap="round"/>
-        <path d="M86 52 Q84 40 88 34 L90 44 L91 30 Q94 28 95 31 L95 44 L97 32 Q100 30 101 33 L99 46 L103 38 Q106 38 105 42 L100 56 Q94 60 88 57 Z" fill="#f6caae"/>
-        <!-- other hand -->
-        <path d="M44 86 Q52 76 62 80" stroke="#f6caae" stroke-width="7" fill="none" stroke-linecap="round"/>
-      </g>
-    </svg>
-  </div>
-  <div class="card" style="left:631px">
-    <p>Amazing teamwork<br>across many fields</p>
-    <svg viewBox="0 0 120 92" aria-hidden="true">
-      <g filter="url(#sticker)">
-        <!-- human arm -->
-        <path d="M-4 52 L40 58 L46 74 L-4 78 Z" fill="#efb184"/>
-        <path d="M38 56 Q56 50 66 60 Q70 66 64 72 Q56 80 44 76 Z" fill="#f4bf96"/>
-        <path d="M48 76 Q60 80 68 74" stroke="#d99670" stroke-width="2" fill="none"/>
-        <!-- robot arm -->
-        <path d="M124 34 L84 50 L88 66 L124 56 Z" fill="#e9efff"/>
-        <path d="M124 38 L94 50" stroke="#5a6fe0" stroke-width="4"/>
-        <path d="M112 46 L118 44 L120 52 L114 54 Z" fill="#2b3a8a"/>
-        <path d="M88 50 Q72 52 62 60 Q58 66 64 70 Q74 72 90 66 Z" fill="#dfe6ff"/>
-        <g stroke="#a7b4e6" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M70 58 L80 56"/><path d="M68 63 L82 61"/><path d="M68 68 L84 65"/></g>
-        <path d="M56 58 Q62 54 70 56" stroke="#f4bf96" stroke-width="5" stroke-linecap="round" fill="none"/>
-      </g>
-    </svg>
-  </div>
-
-  <!-- ===== Gunakan AI dengan bijak ===== -->
-  <div class="panel p-bijak"></div>
-  <div class="pill pill-bijak"><span><span style="color:#4b237c">Use</span>&nbsp;<span style="color:#e07ad2">AI</span>&nbsp;<span style="color:#4b237c">Responsibly</span></span></div>
-
-  <div class="etik-card"></div>
-  <svg id="etik" viewBox="0 0 140 96" aria-label="Use it with ethics">
-    <defs>
-      <linearGradient id="gEtik" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d6af0"/><stop offset="1" stop-color="#3d2aa8"/></linearGradient>
-    </defs>
-    <text x="70" y="13" text-anchor="middle" font-family="'Lilita One',sans-serif" font-size="12.5" letter-spacing=".6" fill="#3b2c94">USE IT WITH</text>
-    <text x="70" y="60" text-anchor="middle" font-family="'Lilita One',sans-serif" font-size="46" textLength="126" lengthAdjust="spacingAndGlyphs"
-          fill="url(#gEtik)" stroke="#e6dcff" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ETHICS</text>
-    <text x="70" y="78" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="10.6" fill="#30247f">NO 18+, NO deepfakes, NO</text>
-    <text x="70" y="91" text-anchor="middle" font-family="'Baloo 2',sans-serif" font-weight="800" font-size="10.6" fill="#30247f">cyberbullying &amp; always be wise</text>
-  </svg>
-
-  <svg id="wheel" viewBox="0 0 154 154" aria-label="Principles for using AI">
-    <g transform="translate(77 77)">
-      <circle r="76" fill="#fff"/>
-      <path d="M0 0 L0 -72 A72 72 0 0 0 -72 0 Z" fill="#3e2fa3"/>
-      <path d="M0 0 L72 0 A72 72 0 0 0 0 -72 Z" fill="#4f82f2"/>
-      <path d="M0 0 L-72 0 A72 72 0 0 0 0 72 Z" fill="#f08fd6"/>
-      <path d="M0 0 L0 72 A72 72 0 0 0 72 0 Z" fill="#b38af2"/>
-      <path d="M0 -72 V72 M-72 0 H72" stroke="#fff" stroke-width="3"/>
-    </g>
-    <g font-family="'Baloo 2',sans-serif" font-weight="700" font-size="10.2" fill="#fff" text-anchor="middle">
-      <text x="45" y="40">Be</text><text x="45" y="52">creative</text><text x="45" y="64">&amp; aware</text>
-      <text x="111" y="40">Use it</text><text x="111" y="52">in positive</text><text x="111" y="64">ways</text>
-      <text x="45" y="98">Protect data</text><text x="45" y="110">&amp; privacy</text>
-      <text x="111" y="96">Keep</text><text x="111" y="108">adapting</text><text x="111" y="120">&amp; learning</text>
-    </g>
-  </svg>
-
-  <!-- standing robot -->
-  <svg id="robot-b" viewBox="0 0 196 255" aria-hidden="true">
-    <defs>
-      <linearGradient id="gWhite" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2d6f5"/></linearGradient>
-      <linearGradient id="gPurp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a86af2"/><stop offset="1" stop-color="#6a2fc4"/></linearGradient>
-    </defs>
-    <g filter="url(#sticker)">
-      <!-- legs -->
-      <rect x="85" y="182" width="25" height="84" rx="10" fill="url(#gWhite)"/>
-      <rect x="116" y="182" width="25" height="84" rx="10" fill="url(#gWhite)"/>
-      <rect x="83" y="222" width="29" height="15" rx="6" fill="url(#gPurp)"/>
-      <rect x="114" y="222" width="29" height="15" rx="6" fill="url(#gPurp)"/>
-      <!-- hips -->
-      <path d="M82 158 H144 Q148 184 134 194 H92 Q78 184 82 158 Z" fill="url(#gPurp)"/>
-      <!-- right arm, hanging -->
-      <path d="M148 118 Q164 138 166 164" stroke="url(#gWhite)" stroke-width="15" fill="none" stroke-linecap="round"/>
-      <circle cx="166" cy="166" r="8" fill="url(#gPurp)"/>
-      <path d="M166 170 Q171 192 176 208" stroke="#efe8fb" stroke-width="13" fill="none" stroke-linecap="round"/>
-      <rect x="166" y="200" width="20" height="11" rx="4" transform="rotate(-12 176 205)" fill="url(#gPurp)"/>
-      <path d="M168 212 Q178 208 188 214 L190 232 Q186 238 182 232 L180 222 L178 236 Q174 240 172 234 L170 222 Z" fill="#efe8fb"/>
-      <!-- torso -->
-      <path d="M80 104 Q110 94 142 104 Q152 132 142 162 H84 Q72 132 80 104 Z" fill="url(#gWhite)"/>
-      <path d="M92 108 Q110 156 130 108" stroke="#c9b5ec" stroke-width="2.5" fill="none"/>
-      <circle cx="111" cy="124" r="7" fill="url(#gPurp)"/>
-      <!-- left arm, raised and pointing up -->
-      <path d="M74 116 Q58 132 48 146" stroke="url(#gPurp)" stroke-width="15" fill="none" stroke-linecap="round"/>
-      <circle cx="47" cy="146" r="9" fill="#efe8fb"/>
-      <path d="M46 144 Q32 124 30 100" stroke="#efe8fb" stroke-width="14" fill="none" stroke-linecap="round"/>
-      <rect x="19" y="92" width="22" height="11" rx="4" transform="rotate(-6 30 97)" fill="url(#gPurp)"/>
-      <rect x="17" y="74" width="26" height="22" rx="9" fill="#f4efff"/>
-      <rect x="22" y="50" width="9" height="30" rx="4.5" fill="#f4efff"/>
-      <path d="M40 80 Q48 82 46 90" stroke="#f4efff" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <!-- shoulders + neck -->
-      <circle cx="75" cy="114" r="13" fill="url(#gPurp)"/>
-      <circle cx="147" cy="114" r="13" fill="url(#gPurp)"/>
-      <rect x="97" y="94" width="28" height="13" rx="5" fill="#7a3dd0"/>
-      <!-- head -->
-      <rect x="55" y="40" width="14" height="32" rx="7" fill="url(#gPurp)"/>
-      <rect x="145" y="36" width="19" height="40" rx="9.5" fill="url(#gPurp)"/>
-      <ellipse cx="107" cy="56" rx="44" ry="40" fill="url(#gWhite)"/>
-      <path d="M86 22 Q107 15 128 22" stroke="#d6caee" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <rect x="72" y="32" width="68" height="48" rx="22" fill="#15112b"/>
-      <ellipse cx="94" cy="56" rx="9.5" ry="15" fill="#45f0f2" opacity=".22"/>
-      <ellipse cx="117" cy="56" rx="9.5" ry="15" fill="#45f0f2" opacity=".22"/>
-      <ellipse cx="94" cy="56" rx="6" ry="11" fill="#45f0f2"/>
-      <ellipse cx="117" cy="56" rx="6" ry="11" fill="#45f0f2"/>
-      <path d="M78 26 Q90 18 104 18" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    </g>
-  </svg>
-
-  <!-- arrow -->
-  <svg id="arrow" viewBox="0 0 70 50" aria-hidden="true">
-    <path d="M8 40 Q24 12 60 22" stroke="#fff" stroke-width="5.5" fill="none" stroke-linecap="round"/>
-    <path d="M50 11 L64 23 L49 32" stroke="#fff" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-
-  <!-- clipboard -->
-  <div class="board">
-    <div class="paper"></div>
-    <svg class="clip" viewBox="0 0 118 46" aria-hidden="true">
-      <path d="M16 14 Q16 6 24 6 L94 6 Q102 6 102 14 L104 38 Q104 44 98 44 L20 44 Q14 44 14 38 Z" fill="#c6c0d4"/>
-      <path d="M38 2 L80 2 Q86 2 86 8 L86 16 L32 16 L32 8 Q32 2 38 2 Z" fill="#a49dba"/>
-      <rect x="22" y="20" width="74" height="18" rx="4" fill="#ddd8e8"/>
-    </svg>
-    <div class="tantangan">CHALLENGES</div>
-    <ul class="tlist">
-      <li><svg viewBox="-10 -10 20 20" fill="#6b35b8"><path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/></svg>Misuse of technology</li>
-      <li><svg viewBox="-10 -10 20 20" fill="#b48ae8"><path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/></svg>Some jobs may disappear</li>
-      <li><svg viewBox="-10 -10 20 20" fill="#6b35b8"><path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/></svg>Unequal access to technology</li>
-      <li><svg viewBox="-10 -10 20 20" fill="#b48ae8"><path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/></svg>Lack of ethical awareness</li>
-      <li><svg viewBox="-10 -10 20 20" fill="#6b35b8"><path d="M0-10Q1.6-1.6 10 0Q1.6 1.6 0 10Q-1.6 1.6-10 0Q-1.6-1.6 0-10Z"/></svg>Data privacy issues</li>
-    </ul>
-  </div>
-
-  <!-- siren in bubble -->
-  <svg id="siren" viewBox="0 0 116 116" aria-hidden="true">
-    <defs>
-      <radialGradient id="gSiren" cx="40%" cy="30%" r="70%"><stop offset="0" stop-color="#ff9a8a"/><stop offset=".5" stop-color="#f0323c"/><stop offset="1" stop-color="#b3121f"/></radialGradient>
-    </defs>
-    <circle cx="58" cy="58" r="52" fill="#fff" opacity=".18"/>
-    <g stroke-linecap="round" stroke-width="3.5">
-      <path d="M30 40 L22 34" stroke="#ff5a6a"/><path d="M28 52 L18 52" stroke="#fff"/><path d="M86 40 L94 34" stroke="#fff"/><path d="M88 52 L98 52" stroke="#ff5a6a"/><path d="M58 22 L58 14" stroke="#fff"/>
-    </g>
-    <path d="M38 70 L38 52 Q38 30 58 30 Q78 30 78 52 L78 70 Z" fill="url(#gSiren)"/>
-    <path d="M46 50 Q48 38 58 36" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".85"/>
-    <rect x="32" y="68" width="52" height="10" rx="3" fill="#5c5f74"/>
-    <rect x="28" y="76" width="60" height="9" rx="3" fill="#3c3f52"/>
-    <use href="#bubble" x="2" y="2" width="112" height="112"/>
-  </svg>
-
-  <!-- foreground foliage (generated) -->
-  <svg id="fg" viewBox="0 0 794 1123" preserveAspectRatio="none" aria-hidden="true"><g id="fgBush"></g></svg>
-
-  <!-- free-floating bubbles -->
-  <svg class="bubble" style="left:-26px;top:58px;width:84px;height:84px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bubble"/></svg>
-  <svg class="bubble" style="left:194px;top:-26px;width:100px;height:100px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bubble"/></svg>
-  <svg class="bubble" style="left:405px;top:240px;width:86px;height:86px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bubble"/></svg>
-  <svg class="bubble" style="left:308px;top:284px;width:58px;height:58px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bubble"/></svg>
-  <svg class="bubble" style="left:526px;top:980px;width:38px;height:38px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bubble"/></svg>
+  <h2 class="neon h-dyk">Did you know?</h2>
+  <div class="rule r-dyk end"></div>
+  <p class="para p-dyk"><b>1950</b> – Alan Turing asked, “Can machines think?” <b>1956</b> – “Logic Theorist” became the first AI program.</p>
 
 </main>
 </div>
 
 <script>
-/* ---------- deterministic pixel-art city background ---------- */
+/* floating dots (positions traced from the layout) */
 (function () {
-  let s = 20251122;
-  const rnd = () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
-  const parts = [];
-  const rect = (x, y, w, h, f, o) => parts.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}"${o != null ? ` fill-opacity="${o}"` : ''}/>`);
-
-  function tower(x, top, w, color, win, h) {
-    const H = h || (1123 - top);
-    rect(x, top, w, H, color);
-    rect(x + w - 6, top, 6, H, '#000', .12);            // side shade
-    rect(x + 5, top + 9, w - 14, H - 9, `url(#${win})`);
-    rect(x, top, w, 4, '#fff', .18);                     // roof edge
-  }
-  function blob(cx, cy, r, palette, px) {
-    px = px || 8;
-    for (let gy = cy - r; gy <= cy + r; gy += px) {
-      for (let gx = cx - r; gx <= cx + r; gx += px) {
-        const d = Math.hypot(gx - cx, (gy - cy) * 1.15) + (rnd() - .5) * px * 2.4;
-        if (d > r) continue;
-        const t = (gy - (cy - r)) / (2 * r);              // 0 top -> 1 bottom
-        let i = Math.min(palette.length - 1, Math.max(0, Math.floor(t * palette.length + (rnd() - .5) * 1.6)));
-        rect(Math.round(gx), Math.round(gy), px, px, palette[palette.length - 1 - i]);
-      }
-    }
-  }
-
-  // far skyline (top of page)
-  [[-10,-10,62,'#d8c690','wDark'],[48,-30,104,'#6f8ed0','wLight'],[150,64,40,'#8ea9cc','wLight'],
-   [188,-12,70,'#7cae9f','wDark'],[256,36,62,'#a8bfe2','wLight'],[318,24,92,'#69a196','wDark'],
-   [410,58,54,'#97b1db','wLight'],[462,-20,78,'#78a69c','wDark'],[540,-4,64,'#e8d39c','wDark'],
-   [602,-14,54,'#5e958f','wDark'],[656,38,62,'#86a8d2','wLight'],[716,8,90,'#6c9e9f','wDark']
-  ].forEach(b => tower(...b));
-  // mid skyline
-  [[-6,170,72,'#5b8e86','wDark'],[88,214,62,'#e0cb90','wDark'],[246,180,82,'#6a99c6','wLight'],
-   [398,198,72,'#5a938a','wTeal'],[520,150,62,'#d7c288','wDark'],[640,188,82,'#4f8584','wTeal'],
-   [736,166,66,'#dfc47e','wDark'],[160,250,60,'#7aa0c8','wLight'],[330,240,60,'#e3cf98','wDark']
-  ].forEach(b => tower(...b));
-
-  // tree canopy (pixel)
-  const green = ['#10332a', '#174432', '#1f573b', '#2a6a44', '#3d8150', '#5c9c5e'];
-  [[40,330,92],[140,300,70],[232,290,62],[300,340,72],[408,306,56],[490,356,64],[572,310,54],
-   [652,336,72],[760,300,74],[20,480,96],[200,520,86],[330,470,62],[560,520,62],[720,470,86],
-   [110,420,70],[440,430,70],[640,430,60]
-  ].forEach(([x, y, r]) => blob(x, y, r, green, 8));
-
-  // dusk overlay for lower half
-  parts.push('<rect x="0" y="0" width="794" height="1123" fill="url(#gDusk)"/>');
-
-  // lower city: side buildings peeking out
-  tower(-8, 560, 52, '#2f6f78', 'wTeal');
-  tower(744, 470, 60, '#d9b762', 'wDark', 420);
-  tower(320, 830, 60, '#284a66', 'wGold');
-  tower(700, 880, 80, '#3a3f7a', 'wGold');
-  tower(-6, 880, 60, '#5d6a3a', 'wGold');
-  rect(0, 1060, 794, 63, '#2d2a5e');
-  tower(180, 1070, 120, '#c8a24e', 'wDark');
-  tower(470, 1075, 90, '#3d5a7a', 'wGold');
-
-  // dark trees in the lower city
-  const deep = ['#0f2c2a', '#163b33', '#1f4d3b', '#2b6244'];
-  [[8,640,44],[10,800,40],[786,560,36],[786,860,36],[350,890,40],[730,1000,40]].forEach(([x, y, r]) => blob(x, y, r, deep, 8));
-
-  // bright foreground bushes
-  const lime = ['#3f6b1f', '#5a8b26', '#7eae2f', '#a2c83a', '#c9df55', '#e6ef8a'];
-  [[38,1100,76],[140,1112,60],[262,1112,46],[790,930,44],[792,1086,58],[470,1118,34],[700,1120,40]
-  ].forEach(([x, y, r]) => blob(x, y, r, lime, 7));
-
-  document.getElementById('bgCity').innerHTML = parts.join('');
-
-  // foreground bushes overlapping the bottom panel edges
-  parts.length = 0;
-  [[14,1112,56],[92,1122,36],[796,898,28],[792,1104,44]].forEach(([x, y, r]) => blob(x, y, r, lime, 7));
-  document.getElementById('fgBush').innerHTML = parts.join('');
+  const dots = [[14,33,3],[43,46,3.5],[230,48,3.5],[312,30,3],[411,34,3.5],[442,34,3],[706,77,3.5],[91,148,3],[2,177,3],
+    [323,160,3],[116,218,3],[144,247,3],[111,262,3],[232,262,3],[555,231,3],[586,240,3],[545,207,3.5],[700,213,3.5],
+    [728,228,3],[29,523,2.5],[97,503,3],[650,283,3],[683,330,3],[620,190,3],[668,140,3],[520,186,2.5],[60,96,2.5],
+    [180,112,2.5],[268,190,3],[480,196,2.5],[262,300,2.5],[714,430,3],[160,200,2.5],[380,214,2.5]];
+  const win = [];
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) win.push(`<rect x="${10 + c * 22}" y="${12 + r * 32}" width="14" height="20" rx="2"/>`);
+  document.getElementById('winL').innerHTML = win.join('');
+  document.getElementById('dots').innerHTML = dots.map(([x, y, r]) =>
+    `<circle class="dot" cx="${x}" cy="${y}" r="${r}"/>`).join('');
 })();
 
-/* ---------- fit page to small screens (screen only) ---------- */
+/* fit the A4 page to small screens (screen only) */
 (function () {
   const page = document.getElementById('page');
   if (/[?&]bare\b/.test(location.search)) { document.documentElement.classList.add('bare'); return; }
   function fit() {
-    const avail = window.innerWidth - 32;
-    const f = Math.min(1, avail / page.offsetWidth * (parseFloat(getComputedStyle(page).zoom) || 1));
+    const w = document.documentElement.clientWidth || window.innerWidth;
+    const f = Math.min(1, (w - 32) / 794);
     page.style.setProperty('--fit', f.toFixed(4));
   }
   window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  if ('ResizeObserver' in window) new ResizeObserver(fit).observe(document.documentElement);
   fit();
 })();
 </script>
