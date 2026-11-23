@@ -1,14 +1,19 @@
-# Artificial Intelligence — A4 Infographic
+# Ctrl + Learn: Navigating AI-Powered Learning
 
-A neon A4 (210 × 297 mm) infographic about Artificial Intelligence, built with HTML, CSS and inline SVG.
+A printable A4 (210 × 297 mm) infographic on artificial intelligence in education, built with HTML, CSS and SVG.
 
-- **5 layouts to choose from.** Use the Back/Next arrows, the 1–5 buttons or the keyboard arrow keys.
-  1. Original: split columns, like the reference.
-  2. Mirrored: impacts on the left, plus key terms.
-  3. Glass Cards: four frosted cards, plus AI milestones.
-  4. Sidebar: a glowing info panel, plus key terms.
-  5. Bottom Cards: the classic top half, with cards along the bottom.
-- **Save as PDF (A4)** downloads the ready-made PDF for the layout on screen, from `pdf/`.
-- **Linking to a layout:** add `?layout=3` to the URL.
-- **After changing the design**, regenerate the five PDFs: print each `?layout=N` to A4 with margins off and background graphics on.
+- **`index.html`:** the main design, laid out from the client's sketch. It covers:
+  - Introduction
+  - Benefits and risks
+  - Four statistics with sources
+  - Responsible use of AI in education
+  - References (APA 7)
+- **Save as PDF (A4)** downloads `pdf/ctrl-learn-ai-in-education-a4.pdf`.
+- **`old.html`:** the earlier neon design with 5 switchable layouts. Its PDFs are in `pdf/ai-infographic-layout-*.pdf`.
+- **After changing the design**, regenerate the PDF: print the page to A4 with margins off and background graphics on.
 - **Hosting:** it's a static site and deploys to Vercel as-is, with no build step.
+
+## Statistics sources
+
+- **Pew Research Center (2025):** 26% of U.S. teens have used ChatGPT for schoolwork. 54% say it's acceptable for researching new topics, and 18% say it's acceptable for writing essays.
+- **UNESCO (2023):** fewer than 10% of 450+ schools and universities had formal guidance on generative AI.

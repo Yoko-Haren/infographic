@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Infographic (Neon)</title>
+<meta name="description" content="A printable A4 neon infographic about Artificial Intelligence: what it is, how it works, its positive impacts, its history, and how to use it wisely.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech&display=swap" rel="stylesheet">
+<style>
+:root{
+  --glow-1:#ffd6fb;
+  --glow-2:#ff8ae8;
+  --glow-3:#c94fd8;
+  --box:150,100,225;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#1d0f2b}
+body{
+  font-family:'Share Tech',system-ui,sans-serif;color:#fff;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+
+/* ---------- screen chrome: layout picker + save ---------- */
+.toolbar{
+  position:sticky;top:0;z-index:100;
+  display:flex;justify-content:center;align-items:center;gap:12px 20px;flex-wrap:wrap;
+  padding:10px 16px;background:rgba(29,15,43,.94);backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(255,170,240,.2);color:#f3dcff;font-size:14px;letter-spacing:.3px;
+}
+.picker{display:flex;align-items:center;gap:10px}
+.btn-round{
+  width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;color:#fff;
+  background:linear-gradient(135deg,#e05ad8,#7b45e0);
+  box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 0 14px rgba(255,120,230,.5);
+}
+.btn-round svg{width:18px;height:18px}
+.btn-round:hover{box-shadow:0 0 0 1px rgba(255,255,255,.75) inset,0 0 22px rgba(255,140,235,.9)}
+.pick-label{min-width:196px;text-align:center;line-height:1.2}
+.pick-label strong{display:block;font-family:'Audiowide',sans-serif;font-weight:400;font-size:14px;letter-spacing:.6px;color:#fff;text-shadow:0 0 8px rgba(255,140,235,.8)}
+.pick-label span{font-size:12.5px;color:#d9c4f2}
+.numbers{display:flex;gap:6px}
+.numbers button{
+  width:30px;height:30px;border-radius:9px;cursor:pointer;color:#fff;font-family:'Audiowide',sans-serif;font-size:12px;
+  border:1px solid rgba(255,200,250,.45);background:rgba(150,100,225,.22);
+}
+.numbers button:hover{background:rgba(150,100,225,.45)}
+.numbers button[aria-current="true"]{background:linear-gradient(135deg,#e05ad8,#7b45e0);border-color:#fff;box-shadow:0 0 12px rgba(255,120,230,.6)}
+.save{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;text-decoration:none;color:#fff;
+  font-family:'Audiowide',sans-serif;font-size:13px;letter-spacing:.3px;
+  background:linear-gradient(90deg,#e05ad8,#7b45e0);
+  box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 0 18px rgba(255,120,230,.55);
+}
+.save svg{width:16px;height:16px}
+.save:hover{box-shadow:0 0 0 1px rgba(255,255,255,.7) inset,0 0 26px rgba(255,140,235,.9)}
+.toolbar :focus-visible,.side:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.wrap{padding:24px 16px 48px;display:flex;justify-content:safe center;align-items:flex-start;gap:16px}
+.side{
+  position:sticky;top:calc(50vh - 30px);flex:none;width:52px;height:52px;margin-top:300px;border-radius:50%;border:0;cursor:pointer;
+  display:grid;place-items:center;color:#fff;background:rgba(123,69,224,.55);
+  box-shadow:0 0 0 1px rgba(255,220,250,.5) inset,0 0 18px rgba(255,120,230,.45);
+}
+.side svg{width:24px;height:24px}
+.side:hover{background:linear-gradient(135deg,#e05ad8,#7b45e0)}
+@media (max-width:919px){.side{display:none}}
+.bare .toolbar,.bare .side{display:none}
+.bare .wrap{padding:0;display:block}
+.bare .page{box-shadow:none;zoom:1}
+
+/* ---------- A4 page ---------- */
+.page{
+  position:relative;flex:none;
+  width:210mm;height:297mm;              /* 794 x 1123 px at 96dpi */
+  overflow:hidden;background:#7a3aa8;
+  box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 60px rgba(200,80,220,.25);
+  zoom:var(--fit,1);
+}
+#art{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+
+/* ---------- neon type ---------- */
+.neon{
+  font-family:'Audiowide',sans-serif;font-weight:400;color:#fff;text-transform:uppercase;letter-spacing:.4px;
+  text-shadow:0 0 2px #fff,0 0 6px var(--glow-1),0 0 12px var(--glow-2),0 0 24px var(--glow-3);
+  -webkit-text-stroke:.45px #fff;
+}
+.h-lg{font-size:20px;line-height:25px}
+.h-md{font-size:15px;line-height:18px}
+.h-sm{font-size:11.5px;line-height:14px;letter-spacing:1.2px}
+.para{
+  font-family:'Share Tech',sans-serif;color:#fff;font-size:16.4px;line-height:18.6px;letter-spacing:.15px;
+  text-shadow:0 0 6px rgba(40,5,70,.95),0 0 2px rgba(40,5,70,.9),0 1px 1px rgba(40,5,70,.8);
+}
+.para b{font-weight:400;color:#ffe6fb;text-shadow:0 0 6px rgba(255,140,235,.9),0 0 2px #fff}
+.rule{
+  position:relative;height:2px;margin:12px 0 10px -7px;width:calc(100% + 10px);
+  background:repeating-linear-gradient(90deg,#fff 0 9px,transparent 9px 14px);
+  filter:drop-shadow(0 0 3px #ff9cf0);
+}
+.rule::before{content:"";position:absolute;left:0;top:-6px;width:2.5px;height:14px;background:#fff;border-radius:2px}
+
+/* ---------- text blocks (each layout shows and places them) ---------- */
+.blk,.sidepanel{position:absolute;z-index:10;display:none}
+.sidepanel{z-index:9}
+.how{margin-top:12px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:7px 8px;margin-top:8px;text-align:left}
+.chip{
+  display:flex;align-items:center;gap:6px;height:25px;padding:0 8px 0 4px;border-radius:7px;
+  font-family:'Audiowide',sans-serif;font-size:10.5px;letter-spacing:.4px;color:#fff;
+  background:linear-gradient(90deg,rgba(var(--box),.85),rgba(var(--box),.45));
+  border:1px solid rgba(255,200,250,.55);
+  box-shadow:0 0 10px rgba(255,120,230,.35),inset 0 0 8px rgba(255,255,255,.12);
+}
+.chip i{
+  flex:none;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:10px;
+  background:#fff;color:#7b3fc4;box-shadow:0 0 8px #ff9cf0;
+}
+/* impact list: base = compact rows */
+.list{display:flex;flex-direction:column;margin-top:2px}
+.box{
+  position:relative;display:flex;align-items:center;gap:10px;text-align:left;
+  font-family:'Share Tech',sans-serif;font-size:14.4px;line-height:16.6px;color:#fff;
+  text-shadow:0 0 4px rgba(60,10,100,.7);
+  padding:8px 0;border-bottom:1px dashed rgba(255,214,251,.35);
+}
+.box:last-child{border-bottom:0}
+.box svg{
+  flex:none;width:30px;height:30px;padding:6px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(255,140,235,.6),rgba(123,69,224,.7));
+  box-shadow:0 0 10px rgba(255,120,230,.5);
+}
+/* fading boxes on the right (layouts 1 + 5) */
+:is(.page[data-layout="1"],.page[data-layout="5"]) .list{gap:22px;margin-top:10px}
+:is(.page[data-layout="1"],.page[data-layout="5"]) .list .box{
+  flex-direction:row-reverse;height:55px;padding:0 12px 0 44px;text-align:right;border:0;
+  font-size:15.6px;line-height:17.6px;
+  background:linear-gradient(90deg,rgba(var(--box),0) 0%,rgba(var(--box),.72) 24%,rgba(var(--box),.86) 100%);
+}
+:is(.page[data-layout="1"],.page[data-layout="5"]) .list .box::after{content:"";position:absolute;right:0;top:0;bottom:0;width:3px;background:#fff;opacity:.55;box-shadow:0 0 8px #ff9cf0}
+:is(.page[data-layout="1"],.page[data-layout="5"]) .list .box svg,.page[data-layout="2"] .list .box svg{width:22px;height:22px;padding:0;background:none;box-shadow:none;filter:drop-shadow(0 0 4px #ff9cf0)}
+/* fading boxes on the left (layout 2) */
+.page[data-layout="2"] .list{gap:10px;margin-top:2px}
+.page[data-layout="2"] .list .box{
+  height:50px;padding:0 40px 0 12px;border:0;font-size:14.6px;line-height:16.6px;
+  background:linear-gradient(270deg,rgba(var(--box),0) 0%,rgba(var(--box),.72) 24%,rgba(var(--box),.86) 100%);
+}
+.page[data-layout="2"] .list .box::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#fff;opacity:.55;box-shadow:0 0 8px #ff9cf0}
+/* right-aligned blocks */
+.page[data-layout="1"] :is(.blk-impact,.blk-dyk), .page[data-layout="5"] .blk-impact, .page[data-layout="2"] :is(.blk-what,.blk-wise,.blk-dyk){text-align:right}
+:is(.page[data-layout="1"] :is(.blk-impact,.blk-dyk) .rule, .page[data-layout="5"] .blk-impact .rule, .page[data-layout="2"] :is(.blk-what,.blk-wise,.blk-dyk) .rule){margin:12px -7px 10px auto}
+:is(.page[data-layout="1"] :is(.blk-impact,.blk-dyk) .rule, .page[data-layout="5"] .blk-impact .rule, .page[data-layout="2"] :is(.blk-what,.blk-wise,.blk-dyk) .rule)::before{left:auto;right:0}
+/* AI milestones timeline */
+.tl{list-style:none;position:relative;margin-top:2px}
+.tl::before{content:"";position:absolute;left:21px;top:10px;bottom:10px;width:2px;background:linear-gradient(#ff8ae8,#9a6ef0);box-shadow:0 0 6px #ff8ae8}
+.tl li{position:relative;display:grid;grid-template-columns:44px 1fr;gap:8px;align-items:start;margin-bottom:9px;text-align:left}
+.tl li:last-child{margin-bottom:0}
+.tl b{
+  position:relative;display:block;text-align:center;padding:3px 0 2px;border-radius:999px;
+  font-family:'Audiowide',sans-serif;font-weight:400;font-size:11px;letter-spacing:.4px;color:#fff;
+  background:linear-gradient(135deg,#e05ad8,#7b45e0);box-shadow:0 0 0 1px rgba(255,255,255,.5) inset,0 0 10px rgba(255,120,230,.6);
+}
+.tl span{font-size:14.2px;line-height:16.4px;padding-top:1px}
+/* key terms */
+.terms dt{margin-top:9px;font-family:'Audiowide',sans-serif;font-size:11.5px;letter-spacing:.6px;color:#ffd6fb;text-shadow:0 0 8px rgba(255,140,235,.9)}
+.terms dt:first-child{margin-top:0}
+.terms dd{margin-top:2px;font-size:14.6px;line-height:16.8px}
+/* frosted glass cards */
+.page[data-layout="3"] .blk, .page[data-layout="4"] .sidepanel, .page[data-layout="5"] :is(.blk-wise,.blk-time){
+  padding:14px 16px;border-radius:16px;border:1px solid rgba(255,214,251,.45);
+  background:linear-gradient(160deg,rgba(74,26,124,.66),rgba(36,10,78,.6));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 0 22px rgba(255,110,225,.3),0 10px 26px rgba(20,5,40,.45);
+}
+.page[data-layout="4"] .blk{padding:0;background:none;border:0;box-shadow:none}
+
+/* 1 · Original — split columns like the reference */
+.page[data-layout="1"] .blk-what{display:block;left:56px;top:297px;width:212px;}
+.page[data-layout="1"] .blk-impact{display:block;left:497px;top:312px;width:260px;}
+.page[data-layout="1"] .blk-wise{display:block;left:59px;top:737px;width:206px;}
+.page[data-layout="1"] .blk-dyk{display:block;left:552px;top:808px;width:196px;}
+.page[data-layout="1"] .blk-impact .bh{padding-right:9px}
+.page[data-layout="1"] .blk-wise .rule{width:160px}
+.page[data-layout="1"] .blk-impact .rule, .page[data-layout="5"] .blk-impact .rule{width:199px}
+.page[data-layout="1"] .blk-dyk .rule{width:177px}
+/* 2 · Mirrored — impacts on the left, definition on the right, key terms */
+.page[data-layout="2"] .blk-impact{display:block;left:22px;top:236px;width:222px;}
+.page[data-layout="2"] .blk-what{display:block;left:530px;top:297px;width:224px;}
+.page[data-layout="2"] .blk-terms{display:block;left:30px;top:694px;width:172px;}
+.page[data-layout="2"] .blk-wise{display:block;left:560px;top:600px;width:194px;}
+.page[data-layout="2"] .blk-dyk{display:block;left:560px;top:860px;width:194px;}
+.page[data-layout="2"] .blk-impact h2{font-size:17px;line-height:21px}
+/* 3 · Glass cards — four frosted corner cards + AI milestones */
+.page[data-layout="3"] .blk-what{display:block;left:18px;top:286px;width:228px;}
+.page[data-layout="3"] .blk-impact{display:block;left:560px;top:296px;width:216px;}
+.page[data-layout="3"] .blk-time{display:block;left:560px;top:742px;width:216px;}
+.page[data-layout="3"] .blk-wise{display:block;left:18px;top:848px;width:322px;}
+.page[data-layout="3"] .blk-impact h2{font-size:17px;line-height:21px}
+/* 4 · Sidebar — one glowing info panel on the right, key terms on the left */
+.page[data-layout="4"] .sidepanel{display:block;left:562px;top:284px;width:216px;height:706px}
+.page[data-layout="4"] .blk-what{display:block;left:576px;top:298px;width:188px;}
+.page[data-layout="4"] .blk-impact{display:block;left:576px;top:568px;width:188px;}
+.page[data-layout="4"] .blk-dyk{display:block;left:576px;top:866px;width:188px;}
+.page[data-layout="4"] .blk-wise{display:block;left:30px;top:300px;width:205px;}
+.page[data-layout="4"] .blk-terms{display:block;left:30px;top:566px;width:170px;}
+.page[data-layout="4"] :is(.blk-what,.blk-dyk) .para{font-size:15.4px;line-height:17.4px}
+.page[data-layout="4"] .blk-what h2{font-size:18px;line-height:22px}
+.page[data-layout="4"] .blk-impact h2{font-size:14.5px;line-height:18px}
+.page[data-layout="4"] .list .box{font-size:13.8px;line-height:15.6px;padding:4px 0}
+/* 5 · Bottom cards — classic top half, cards along the bottom */
+.page[data-layout="5"] .blk-what{display:block;left:56px;top:297px;width:212px;}
+.page[data-layout="5"] .blk-impact{display:block;left:497px;top:312px;width:260px;}
+.page[data-layout="5"] .blk-wise{display:block;left:18px;top:872px;width:330px;}
+.page[data-layout="5"] .blk-time{display:block;left:586px;top:800px;width:190px;}
+.page[data-layout="5"] .blk-impact .bh{padding-right:9px}
+
+/* ---------- print ---------- */
+@page{size:A4;margin:0}
+@media print{
+  html,body{background:none;width:210mm;height:297mm;overflow:hidden}
+  .toolbar,.side{display:none !important}
+  .wrap{padding:0;display:block}
+  .page{margin:0;box-shadow:none;zoom:1 !important;break-after:avoid;page-break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="picker" role="group" aria-label="Choose a layout">
+    <button type="button" class="btn-round" data-step="-1" aria-label="Previous layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="pick-label" aria-live="polite"><strong id="layoutName">Original</strong><span id="layoutInfo">Layout 1 of 5</span></div>
+    <button type="button" class="btn-round" data-step="1" aria-label="Next layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="numbers" id="numbers" role="group" aria-label="Jump to layout"></div>
+  <a class="save" id="savePdf" href="pdf/ai-infographic-layout-1.pdf" download="AI-Infographic-1-Original.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+    Save as PDF (A4)
+  </a>
+</div>
+
+<div class="wrap">
+<button type="button" class="side" data-step="-1" aria-label="Previous layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<main class="page" id="page" data-layout="1" aria-label="Artificial Intelligence infographic">
+
+  <!-- ===== illustration (drawn in reference units: 736 x 1041) ===== -->
+  <svg id="art" viewBox="0 0 736 1041" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gBase" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#a2419c"/><stop offset=".17" stop-color="#94409f"/>
+        <stop offset=".36" stop-color="#7c3ba8"/><stop offset=".55" stop-color="#5e2b8e"/>
+        <stop offset=".72" stop-color="#7e2f8e"/><stop offset="1" stop-color="#9d3a93"/>
+      </linearGradient>
+      <radialGradient id="gHalo" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#fff6ff" stop-opacity=".95"/>
+        <stop offset=".32" stop-color="#efd2ff" stop-opacity=".5"/>
+        <stop offset=".7" stop-color="#c27ee6" stop-opacity=".18"/>
+        <stop offset="1" stop-color="#b070e0" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="gFloor" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#cf6ac4"/><stop offset=".3" stop-color="#ad48a6"/><stop offset="1" stop-color="#8e3189"/>
+      </linearGradient>
+      <linearGradient id="gRay" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="gShadow" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3a0f3e" stop-opacity=".45"/><stop offset=".35" stop-color="#2c0b33" stop-opacity=".9"/><stop offset="1" stop-color="#22082a" stop-opacity=".95"/>
+      </linearGradient>
+      <linearGradient id="gBldA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d45ae"/><stop offset="1" stop-color="#55298a"/></linearGradient>
+      <linearGradient id="gBldB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d44b0"/><stop offset="1" stop-color="#cf96e8"/></linearGradient>
+      <linearGradient id="gBldC" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6f379f"/><stop offset="1" stop-color="#b274da"/></linearGradient>
+      <linearGradient id="gBldE" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9bdf5"/><stop offset="1" stop-color="#9558c8"/></linearGradient>
+      <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7edff"/><stop offset="1" stop-color="#e8cdfb"/></linearGradient>
+      <radialGradient id="gScreen" cx="50%" cy="46%" r="62%">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#f8f0ff"/><stop offset=".8" stop-color="#e4d0fa"/><stop offset="1" stop-color="#d0b6f2"/>
+      </radialGradient>
+      <linearGradient id="gHood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#43319f"/><stop offset="1" stop-color="#271c78"/></linearGradient>
+      <linearGradient id="gPants" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6de8"/><stop offset="1" stop-color="#6a3fc0"/></linearGradient>
+      <linearGradient id="gShin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e37ad8"/><stop offset="1" stop-color="#ad4cb0"/></linearGradient>
+      <linearGradient id="gShoe" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2d8fc"/><stop offset="1" stop-color="#a796ec"/></linearGradient>
+      <filter id="blurS" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.4"/></filter>
+      <filter id="blurM" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
+      <filter id="blurL" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"/></filter>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="neon" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1.8" result="b1"/>
+        <feFlood flood-color="#ffffff"/><feComposite in2="b1" operator="in" result="g1"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b2"/>
+        <feFlood flood-color="#ff8ae8" flood-opacity=".95"/><feComposite in2="b2" operator="in" result="g2"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b3"/>
+        <feFlood flood-color="#c94fd8" flood-opacity=".8"/><feComposite in2="b3" operator="in" result="g3"/>
+        <feMerge><feMergeNode in="g3"/><feMergeNode in="g2"/><feMergeNode in="g1"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <path id="arc1" d="M 70 128 Q 368 66 666 128"/>
+      <path id="arc2" d="M 60 184 Q 368 124 676 184"/>
+      <!-- ===== ambience: lighting on the people, fog, grain ===== -->
+      <filter id="fxRunner" x="-12%" y="-8%" width="124%" height="116%" color-interpolation-filters="sRGB">
+        <feColorMatrix in="SourceGraphic" type="matrix" result="grade"
+          values="0.80 0.10 0.10 0 0.02  0.05 0.72 0.13 0 0  0.08 0.06 0.90 0 0.04  0 0 0 1 0"/>
+        <feFlood flood-color="#1a0a44" flood-opacity=".32"/>
+        <feComposite in2="SourceAlpha" operator="in" result="shade"/>
+        <feBlend in="shade" in2="grade" mode="multiply" result="shaded"/>
+        <feMorphology in="SourceAlpha" operator="erode" radius="5" result="er"/>
+        <feComposite in="SourceAlpha" in2="er" operator="out" result="edge"/>
+        <feGaussianBlur in="edge" stdDeviation="3.5" result="edgeB"/>
+        <feFlood flood-color="#ffe4fd"/>
+        <feComposite in2="edgeB" operator="in"/>
+        <feComposite in2="SourceAlpha" operator="in" result="rim"/>
+        <feBlend in="rim" in2="shaded" mode="screen" result="lit"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="bl"/>
+        <feFlood flood-color="#ffc2f5" flood-opacity=".4"/>
+        <feComposite in2="bl" operator="in" result="bloom"/>
+        <feMerge><feMergeNode in="bloom"/><feMergeNode in="lit"/></feMerge>
+      </filter>
+      <filter id="fxSmall" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+        <feColorMatrix in="SourceGraphic" type="matrix" result="grade"
+          values="0.82 0.10 0.10 0 0.03  0.06 0.76 0.12 0 0.01  0.08 0.08 0.88 0 0.05  0 0 0 1 0"/>
+        <feFlood flood-color="#cfa6f2" flood-opacity=".2"/>
+        <feComposite in2="SourceAlpha" operator="in" result="haze"/>
+        <feMerge result="hazed"><feMergeNode in="grade"/><feMergeNode in="haze"/></feMerge>
+        <feMorphology in="SourceAlpha" operator="erode" radius="2" result="er"/>
+        <feComposite in="SourceAlpha" in2="er" operator="out" result="edge"/>
+        <feGaussianBlur in="edge" stdDeviation="1.6" result="edgeB"/>
+        <feFlood flood-color="#fff0ff"/>
+        <feComposite in2="edgeB" operator="in"/>
+        <feComposite in2="SourceAlpha" operator="in" result="rim"/>
+        <feBlend in="rim" in2="hazed" mode="screen" result="lit"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="bl"/>
+        <feFlood flood-color="#ffd0f8" flood-opacity=".45"/>
+        <feComposite in2="bl" operator="in" result="bloom"/>
+        <feMerge><feMergeNode in="bloom"/><feMergeNode in="lit"/></feMerge>
+      </filter>
+      <!-- cel-shaded corner smoke: clean outline + soft glow, like the figures -->
+      <filter id="fogCel" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="1.3" result="d"/>
+        <feFlood flood-color="#5f55c4"/>
+        <feComposite in2="d" operator="in" result="line"/>
+        <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="bl"/>
+        <feFlood flood-color="#ffd6fb" flood-opacity=".45"/>
+        <feComposite in2="bl" operator="in" result="glow"/>
+        <feMerge><feMergeNode in="glow"/><feMergeNode in="line"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <linearGradient id="gSmokeL" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#d6d1fd" stop-opacity=".2"/><stop offset=".32" stop-color="#c9c3fb" stop-opacity=".92"/><stop offset="1" stop-color="#9b93ec"/>
+      </linearGradient>
+      <linearGradient id="gSmokeR" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#d6d1fd" stop-opacity=".35"/><stop offset=".35" stop-color="#c9c3fb" stop-opacity=".92"/><stop offset="1" stop-color="#9b93ec"/>
+      </linearGradient>
+      <linearGradient id="gSmokeLight" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f4f3ff" stop-opacity=".9"/><stop offset="1" stop-color="#dcd8fe" stop-opacity=".55"/>
+      </linearGradient>
+      <pattern id="pGrain" width="80" height="80" patternUnits="userSpaceOnUse"><image href="assets/grain.png" width="80" height="80"/></pattern>
+      <radialGradient id="gVignette" cx="50%" cy="48%" r="72%">
+        <stop offset=".55" stop-color="#1b0733" stop-opacity="0"/><stop offset="1" stop-color="#1b0733" stop-opacity=".55"/>
+      </radialGradient>
+      <radialGradient id="gBokeh"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".6" stop-color="#ffd6fb" stop-opacity=".25"/><stop offset="1" stop-color="#ffd6fb" stop-opacity="0"/></radialGradient>
+    </defs>
+
+    <!-- sky -->
+    <rect width="736" height="1041" fill="url(#gBase)"/>
+
+    <!-- floating dots -->
+    <g id="dots" fill="#fff"></g>
+
+    <!-- light halo behind the phone -->
+    <ellipse id="halo" cx="384" cy="555" rx="340" ry="410" fill="url(#gHalo)"/>
+
+    <!-- floor with perspective + light rays -->
+    <rect x="0" y="736" width="736" height="305" fill="url(#gFloor)"/>
+    <g stroke="#fff" stroke-opacity=".16" stroke-width="1.4">
+      <path d="M380 742 L-520 1041 M380 742 L-260 1041 M380 742 L-60 1041 M380 742 L120 1041 M380 742 L250 1041 M380 742 L540 1041 M380 742 L680 1041 M380 742 L860 1041 M380 742 L1060 1041 M380 742 L1320 1041"/>
+    </g>
+    <g id="rays" fill="url(#gRay)">
+      <path d="M364 752 L372 752 L170 1041 L140 1041 Z"/>
+      <path d="M370 752 L376 752 L262 1041 L248 1041 Z"/>
+      <path d="M376 752 L382 752 L330 1041 L302 1041 Z"/>
+      <path d="M384 752 L390 752 L500 1041 L470 1041 Z"/>
+      <path d="M388 752 L394 752 L560 1041 L545 1041 Z"/>
+      <path d="M392 752 L400 752 L672 1041 L640 1041 Z"/>
+      <path d="M360 754 L368 754 L40 960 L20 952 Z" opacity=".7"/>
+      <path d="M396 754 L404 754 L736 930 L736 948 Z" opacity=".7"/>
+    </g>
+
+    <!-- ===== left buildings ===== -->
+    <path d="M-5 430 H257 V805 L-5 925 Z" fill="#62318f"/>
+    <path d="M-5 438 H115 V870 L-5 925 Z" fill="url(#gBldA)"/>
+    <rect x="-5" y="438" width="120" height="4" fill="#e0b0f6"/>
+    <g fill="#9e66d0" opacity=".55"><rect x="0" y="468" width="110" height="5"/><rect x="0" y="500" width="110" height="5"/><rect x="0" y="660" width="110" height="5"/><rect x="0" y="692" width="110" height="5"/></g>
+    <path d="M110 456 L252 484 L252 690 L110 708 Z" fill="url(#gBldB)"/>
+    <path d="M110 456 L252 484" stroke="#f8d8fb" stroke-width="3"/>
+    <g transform="translate(110 456) skewY(11.15)" fill="#f7d6fb" opacity=".38" id="winL"></g>
+    <path d="M178 470 V600 Q178 620 198 620 H252" stroke="#c48ae6" stroke-width="11" fill="none"/>
+    <path d="M175 470 V600 Q175 616 192 617" stroke="#f6d4fa" stroke-width="3" fill="none"/>
+    <path d="M0 640 L242 676 L242 792 L0 842 Z" fill="url(#gBldC)"/>
+    <g stroke="#d49cf0" stroke-opacity=".55" stroke-width="2.2" fill="none">
+      <path d="M0 662 L242 694"/><path d="M0 704 L242 726"/><path d="M0 746 L242 758"/>
+      <path d="M40 646 V834 M90 653 V824 M140 661 V814 M190 668 V803"/>
+    </g>
+    <path d="M0 722 L122 737 L122 867 L0 923 Z" fill="#5c2c8e"/>
+    <path d="M0 722 L122 737" stroke="#e7b6f5" stroke-width="2.5"/>
+    <!-- neon frame -->
+    <g filter="url(#glow)">
+      <rect x="6" y="532" width="46" height="108" rx="9" fill="#ffc6f4" fill-opacity=".12" stroke="#ffd1f7" stroke-width="3"/>
+      <rect x="13" y="540" width="32" height="92" rx="5" fill="none" stroke="#ffd1f7" stroke-width="1.6" stroke-dasharray="1.2 3" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===== right buildings ===== -->
+    <path d="M580 468 H740 V897 L580 825 Z" fill="#62318f"/>
+    <path d="M588 520 L692 506 L692 800 L588 782 Z" fill="url(#gBldE)"/>
+    <path d="M588 520 L692 506" stroke="#fbe0fc" stroke-width="3"/>
+    <g fill="#fbe7ff" opacity=".45">
+      <path d="M600 540 L622 537 L622 640 L600 641 Z"/><path d="M630 536 L652 533 L652 639 L630 640 Z"/><path d="M660 532 L682 529 L682 638 L660 639 Z"/>
+    </g>
+    <path d="M692 470 H740 V897 L692 876 Z" fill="#55298a"/>
+    <g fill="#8c56c4" opacity=".7"><rect x="692" y="500" width="48" height="5"/><rect x="692" y="660" width="48" height="5"/><rect x="692" y="700" width="48" height="5"/></g>
+    <g filter="url(#glow)">
+      <rect x="712" y="545" width="42" height="98" rx="9" fill="#ffc6f4" fill-opacity=".12" stroke="#ffd1f7" stroke-width="3"/>
+      <rect x="719" y="553" width="30" height="82" rx="5" fill="none" stroke="#ffd1f7" stroke-width="1.6" stroke-dasharray="1.2 3" stroke-linecap="round"/>
+    </g>
+    <path d="M584 690 L736 700 L736 884 L584 800 Z" fill="#b377dc"/>
+    <path d="M584 690 L736 700" stroke="#f3cdf8" stroke-width="2.5"/>
+    <g stroke="#9b5cc8" stroke-width="2.2" fill="none"><path d="M584 724 L736 740"/><path d="M584 758 L736 786"/></g>
+    <g filter="url(#glow)" fill="none" stroke="#ffb8f2" stroke-width="2" stroke-dasharray="3 3">
+      <path d="M598 770 L632 776 L632 832 L598 818 Z"/><path d="M642 778 L668 783 L668 828 L642 818 Z"/>
+    </g>
+
+    <!-- runner's shadow -->
+    <path d="M393 924 L288 1041 L490 1041 Z" fill="url(#gShadow)"/>
+
+    <!-- ===== giant glowing phone ===== -->
+    <rect x="236" y="320" width="284" height="474" rx="64" fill="#fff" opacity=".5" filter="url(#blurL)"/>
+    <rect x="255" y="358" width="246" height="410" rx="40" fill="#e08fe2"/>
+    <rect x="258" y="346" width="240" height="406" rx="38" fill="url(#gBody)" stroke="#fff" stroke-width="2"/>
+    <rect x="268" y="356" width="220" height="384" rx="29" fill="url(#gScreen)"/>
+    <rect x="268" y="356" width="220" height="384" rx="29" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.5"/>
+    <!-- neural-network motif on the screen -->
+    <g stroke="#c9a6f2" stroke-width="1.4" opacity=".55" fill="none">
+      <path d="M290 402 L330 386 L372 404 M330 386 L340 428 L290 402 M340 428 L372 404"/>
+      <path d="M464 410 L424 392 L386 412 M424 392 L416 432 L464 410 M416 432 L386 412"/>
+      <path d="M292 690 L330 668 L366 690 M330 668 L326 714"/>
+      <path d="M464 688 L428 666 L392 690 M428 666 L432 712"/>
+    </g>
+    <g fill="#c9a6f2" opacity=".75">
+      <circle cx="290" cy="402" r="3.5"/><circle cx="330" cy="386" r="4"/><circle cx="372" cy="404" r="3.5"/><circle cx="340" cy="428" r="3.5"/>
+      <circle cx="464" cy="410" r="3.5"/><circle cx="424" cy="392" r="4"/><circle cx="386" cy="412" r="3.5"/><circle cx="416" cy="432" r="3.5"/>
+      <circle cx="292" cy="690" r="3.5"/><circle cx="330" cy="668" r="4"/><circle cx="366" cy="690" r="3.5"/><circle cx="326" cy="714" r="3.5"/>
+      <circle cx="464" cy="688" r="3.5"/><circle cx="428" cy="666" r="4"/><circle cx="392" cy="690" r="3.5"/><circle cx="432" cy="712" r="3.5"/>
+    </g>
+    <ellipse id="bloom" cx="378" cy="545" rx="92" ry="175" fill="#fff" opacity=".85" filter="url(#blurM)"/>
+    <rect x="353" y="362" width="50" height="6" rx="3" fill="#cf9fe8"/>
+    <circle cx="414" cy="365" r="3.2" fill="#cf9fe8"/>
+    <path d="M282 600 L312 372 L332 372 L300 640 Z" fill="#fff" opacity=".22"/>
+
+    <!-- light pool where the phone meets the floor -->
+    <ellipse cx="378" cy="762" rx="200" ry="24" fill="#fff" opacity=".5" filter="url(#blurM)"/>
+
+    <!-- ===== figures (lit by the phone: colour grade, backlight shade, rim light, glow) ===== -->
+    <g id="man" filter="url(#fxSmall)"><image href="assets/Neon%20Vector%20Sprinter%20in%20Motion.png" x="227.1" y="198.7" width="156.4" height="211.6"/></g>
+    <g id="woman" filter="url(#fxSmall)"><image href="assets/Purple-haired%20runner%20with%20blue%20shoes.png" x="389.9" y="238.3" width="104.7" height="157"/></g>
+    <g id="runner" filter="url(#fxRunner)"><image href="assets/Rear-view%20runner%20in%20purple%20jacket.png" x="159.6" y="387.2" width="399.6" height="599.4"/></g>
+
+    <!-- faint light shafts from the screen, drifting dust -->
+    <g fill="#fff" opacity=".07" filter="url(#blurS)">
+      <path d="M372 520 L384 520 L150 160 L110 175 Z"/><path d="M372 520 L384 520 L640 150 L680 170 Z"/>
+      <path d="M372 540 L384 540 L40 420 L30 452 Z"/><path d="M372 540 L384 540 L720 430 L730 462 Z"/>
+    </g>
+    <g fill="#fff" filter="url(#blurS)">
+      <circle cx="300" cy="470" r="1.6" opacity=".8"/><circle cx="512" cy="430" r="1.3" opacity=".7"/><circle cx="262" cy="560" r="2" opacity=".6"/>
+      <circle cx="530" cy="600" r="1.5" opacity=".7"/><circle cx="455" cy="512" r="1.2" opacity=".8"/><circle cx="318" cy="690" r="1.8" opacity=".6"/>
+      <circle cx="476" cy="740" r="1.6" opacity=".7"/><circle cx="244" cy="420" r="1.3" opacity=".6"/><circle cx="560" cy="520" r="2.2" opacity=".5"/>
+      <circle cx="408" cy="372" r="1.4" opacity=".8"/><circle cx="350" cy="790" r="1.5" opacity=".6"/><circle cx="520" cy="820" r="2" opacity=".5"/>
+      <circle cx="280" cy="830" r="1.7" opacity=".55"/><circle cx="430" cy="455" r="1.1" opacity=".7"/><circle cx="600" cy="700" r="1.6" opacity=".5"/>
+    </g>
+    <g fill="url(#gBokeh)">
+      <circle cx="120" cy="980" r="16" opacity=".55"/><circle cx="626" cy="996" r="12" opacity=".5"/><circle cx="560" cy="902" r="9" opacity=".45"/>
+      <circle cx="210" cy="870" r="7" opacity=".5"/><circle cx="690" cy="860" r="10" opacity=".4"/>
+    </g>
+
+    <!-- ===== a little smoke in the bottom corners (cel style, deliberately not mirrored) ===== -->
+    <g id="fogL" opacity=".92">
+      <path filter="url(#fogCel)" fill="url(#gSmokeL)" d="M-30 1060 L-30 985 C-5 970 25 975 45 985 C60 955 95 945 120 955 C135 928 160 915 178 912 C186 900 192 890 198 884 C200 905 196 930 200 960 C205 1000 218 1035 240 1060 Z"/>
+      <path fill="url(#gSmokeLight)" d="M-30 1060 L-30 1002 C-6 990 22 994 42 1002 C58 976 92 968 116 976 C136 954 160 944 178 934 C182 960 184 995 192 1030 C196 1045 202 1055 210 1060 Z"/>
+      <g stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="3" opacity=".85">
+        <path d="M-10 980 C10 974 30 978 42 984"/><path d="M64 959 C82 950 101 948 116 953"/><path d="M140 928 C154 919 166 914 176 912" opacity=".6"/>
+      </g>
+    </g>
+    <g id="fogR" opacity=".9">
+      <path filter="url(#fogCel)" fill="url(#gSmokeR)" d="M776 1060 L776 1000 C752 990 728 996 712 1006 C698 984 668 978 646 990 C628 984 604 990 598 1006 C592 1024 600 1046 614 1060 Z"/>
+      <path fill="url(#gSmokeLight)" d="M776 1060 L776 1016 C754 1008 732 1012 716 1020 C702 1000 674 996 652 1006 C636 1002 616 1008 612 1022 C610 1038 614 1050 622 1060 Z"/>
+      <g stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="3" opacity=".85">
+        <path d="M756 994 C740 992 726 996 714 1004"/><path d="M676 983 C664 981 652 985 646 991" opacity=".7"/><path d="M630 991 C620 991 611 996 605 1004" opacity=".6"/>
+      </g>
+    </g>
+
+    <!-- ===== finishing: vignette + film grain ===== -->
+    <rect width="736" height="1041" fill="url(#gVignette)" style="mix-blend-mode:multiply"/>
+    <rect width="736" height="1041" fill="url(#pGrain)" opacity=".09" style="mix-blend-mode:overlay"/>
+
+    <!-- ===== neon title ===== -->
+    <g id="title" filter="url(#neon)" font-family="'Audiowide',sans-serif" fill="#fff8ff" stroke="#fff8ff" stroke-width="1.6" stroke-linejoin="round" text-anchor="middle">
+      <text font-size="62" letter-spacing="1"><textPath href="#arc1" startOffset="50%">ARTIFICIAL</textPath></text>
+      <text font-size="54" letter-spacing="1"><textPath href="#arc2" startOffset="50%">INTELLIGENCE</textPath></text>
+    </g>
+  </svg>
+
+  <!-- ===== text blocks: each layout decides which ones show and where ===== -->
+  <div class="sidepanel" aria-hidden="true"></div>
+
+  <section class="blk blk-what">
+    <h2 class="neon h-lg">What exactly<br>is AI ?</h2>
+    <div class="rule"></div>
+    <p class="para">AI is technology that lets machines <b>imitate human intelligence</b>: they learn from data, spot patterns, and make decisions.</p>
+    <div class="neon h-sm how">How it works</div>
+    <div class="steps" aria-label="How AI works">
+      <div class="chip"><i>1</i>DATA</div>
+      <div class="chip"><i>2</i>PROCESS</div>
+      <div class="chip"><i>3</i>LEARN</div>
+      <div class="chip"><i>4</i>RESULT</div>
+    </div>
+  </section>
+
+  <section class="blk blk-impact">
+    <div class="bh">
+      <h2 class="neon h-lg">Positive impacts<br>of AI in<br>daily life</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="list">
+      <div class="box"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="8.5" y="2.5" width="7" height="12" rx="3.5"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg><span>Virtual assistants answer our questions in seconds</span></div>
+      <div class="box"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5h3l2.2 11h10.6l2.2-7.5H6.6"/><circle cx="9.5" cy="19" r="1.5" fill="#fff"/><circle cx="17" cy="19" r="1.5" fill="#fff"/></svg><span>Smart product suggestions when we shop online</span></div>
+      <div class="box"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8V4.5A1.5 1.5 0 0 1 4.5 3H8M16 3h3.5A1.5 1.5 0 0 1 21 4.5V8M21 16v3.5a1.5 1.5 0 0 1-1.5 1.5H16M8 21H4.5A1.5 1.5 0 0 1 3 19.5V16"/><path d="M9 10h.01M15 10h.01M9.2 15.4c1.6 1.2 4 1.2 5.6 0"/></svg><span>Face recognition keeps our phones secure</span></div>
+      <div class="box"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" stroke-linecap="round" stroke-width="2.6"/></svg><span>Chatbots give fast, 24/7 customer service</span></div>
+      <div class="box"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5L12 14.4 7.5 16.8l.9-5L4.8 8.3l5-.7z"/></svg><span>Handles repetitive tasks so we can focus on creativity</span></div>
+    </div>
+  </section>
+
+  <section class="blk blk-wise">
+    <h2 class="neon h-md">How can we<br>use AI wisely?</h2>
+    <div class="rule"></div>
+    <p class="para">Be creative and stay aware. Use AI in positive ways, <b>protect your data and privacy</b>, and keep learning. Watch out for misuse, deepfakes, and cyberbullying. Remember: AI is a <b>friend, not a foe!</b></p>
+  </section>
+
+  <section class="blk blk-dyk">
+    <h2 class="neon h-md">Did you know?</h2>
+    <div class="rule"></div>
+    <p class="para"><b>1950</b> – Alan Turing asked, “Can machines think?” <b>1956</b> – “Logic Theorist” became the first AI program.</p>
+  </section>
+
+  <section class="blk blk-time">
+    <h2 class="neon h-md">AI milestones</h2>
+    <div class="rule"></div>
+    <ol class="tl para">
+      <li><b>1950</b><span>Alan Turing asks, “Can machines think?”</span></li>
+      <li><b>1956</b><span>The term “Artificial Intelligence” is coined</span></li>
+      <li><b>1997</b><span>Deep Blue beats a chess world champion</span></li>
+      <li><b>2022</b><span>ChatGPT brings AI chat to everyone</span></li>
+    </ol>
+  </section>
+
+  <section class="blk blk-terms">
+    <h2 class="neon h-md">Key terms</h2>
+    <div class="rule"></div>
+    <dl class="terms para">
+      <dt>Machine learning</dt><dd>Computers learn patterns from data instead of fixed rules.</dd>
+      <dt>Neural network</dt><dd>Layers of connected “neurons” inspired by the brain.</dd>
+      <dt>Generative AI</dt><dd>AI that creates new text, images, music, or code.</dd>
+    </dl>
+  </section>
+
+</main>
+<button type="button" class="side" data-step="1" aria-label="Next layout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+/* floating dots (positions traced from the layout) */
+(function () {
+  const dots = [[14,33,3],[43,46,3.5],[230,48,3.5],[312,30,3],[411,34,3.5],[442,34,3],[706,77,3.5],[91,148,3],[2,177,3],
+    [323,160,3],[116,218,3],[144,247,3],[111,262,3],[232,262,3],[555,231,3],[586,240,3],[545,207,3.5],[700,213,3.5],
+    [728,228,3],[29,523,2.5],[97,503,3],[650,283,3],[683,330,3],[620,190,3],[668,140,3],[520,186,2.5],[60,96,2.5],
+    [180,112,2.5],[268,190,3],[480,196,2.5],[262,300,2.5],[714,430,3],[160,200,2.5],[380,214,2.5]];
+  const win = [];
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) win.push(`<rect x="${10 + c * 22}" y="${12 + r * 32}" width="14" height="20" rx="2"/>`);
+  document.getElementById('winL').innerHTML = win.join('');
+  document.getElementById('dots').innerHTML = dots.map(([x, y, r]) =>
+    `<circle class="dot" cx="${x}" cy="${y}" r="${r}"/>`).join('');
+})();
+
+/* layout picker: back / next / numbers / arrow keys, and the matching A4 PDF download */
+(function () {
+  const LAYOUTS = [
+    ['Original', 'Split columns, like the reference'],
+    ['Mirrored', 'Impacts on the left + key terms'],
+    ['Glass Cards', 'Four frosted cards + AI milestones'],
+    ['Sidebar', 'Glowing info panel + key terms'],
+    ['Bottom Cards', 'Classic top + cards along the bottom'],
+  ];
+  const page = document.getElementById('page');
+  const nameEl = document.getElementById('layoutName');
+  const infoEl = document.getElementById('layoutInfo');
+  const save = document.getElementById('savePdf');
+  const nums = document.getElementById('numbers');
+  LAYOUTS.forEach((l, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = i + 1; b.title = l[0];
+    b.setAttribute('aria-label', 'Layout ' + (i + 1) + ': ' + l[0]);
+    b.addEventListener('click', () => set(i + 1));
+    nums.appendChild(b);
+  });
+  function set(n) {
+    n = ((n - 1 + LAYOUTS.length) % LAYOUTS.length) + 1;
+    page.dataset.layout = n;
+    nameEl.textContent = LAYOUTS[n - 1][0];
+    infoEl.textContent = 'Layout ' + n + ' of ' + LAYOUTS.length + ' · ' + LAYOUTS[n - 1][1];
+    [...nums.children].forEach((b, i) => b.setAttribute('aria-current', i + 1 === n ? 'true' : 'false'));
+    save.href = 'pdf/ai-infographic-layout-' + n + '.pdf';
+    save.download = 'AI-Infographic-' + n + '-' + LAYOUTS[n - 1][0].replace(/\s+/g, '-') + '.pdf';
+    const q = new URLSearchParams(location.search); q.set('layout', n);
+    try { history.replaceState(null, '', '?' + q.toString()); } catch (e) { /* file:// may refuse; harmless */ }
+  }
+  document.querySelectorAll('[data-step]').forEach(b =>
+    b.addEventListener('click', () => set(+page.dataset.layout + +b.dataset.step)));
+  document.addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('input,textarea')) return;
+    if (e.key === 'ArrowRight') set(+page.dataset.layout + 1);
+    if (e.key === 'ArrowLeft') set(+page.dataset.layout - 1);
+  });
+  set(+new URLSearchParams(location.search).get('layout') || 1);
+})();
+
+/* fit the A4 page to small screens (screen only) */
+(function () {
+  const page = document.getElementById('page');
+  if (/[?&]bare\b/.test(location.search)) { document.documentElement.classList.add('bare'); return; }
+  function fit() {
+    const w = document.documentElement.clientWidth || window.innerWidth;
+    const arrows = w >= 920 ? 2 * (52 + 16) : 0;
+    const f = Math.min(1, (w - 32 - arrows) / 794);
+    page.style.setProperty('--fit', f.toFixed(4));
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  if ('ResizeObserver' in window) new ResizeObserver(fit).observe(document.documentElement);
+  fit();
+})();
+</script>
+</body>
+</html>
