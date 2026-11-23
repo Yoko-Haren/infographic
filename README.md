@@ -13,7 +13,11 @@ A printable A4 (210 × 297 mm) infographic on artificial intelligence in educati
 - **After changing the design**, regenerate the PDF: print the page to A4 with margins off and background graphics on.
 - **Hosting:** it's a static site and deploys to Vercel as-is, with no build step.
 
-## Statistics sources
+## Statistics sources (Philippines)
 
-- **Pew Research Center (2025):** 26% of U.S. teens have used ChatGPT for schoolwork. 54% say it's acceptable for researching new topics, and 18% say it's acceptable for writing essays.
-- **UNESCO (2023):** fewer than 10% of 450+ schools and universities had formal guidance on generative AI.
+- **ASEAN Foundation, AI Ready ASEAN study (2026)**, as reported by Newsbytes.PH and The Philippine Star:
+  - 83% of Filipino students have used generative AI for learning.
+  - 76% of Filipino students use AI writing tools.
+  - 73% of Filipino educators have used generative AI.
+  - 42% of Filipino teachers use AI writing tools.
+- **DepEd Order No. 003, s. 2026**, Foundational Guidelines on Artificial Intelligence in Basic Education: the basis for the responsible-use points.
